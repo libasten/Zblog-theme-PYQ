@@ -1,4 +1,4 @@
-<article class="article-list-item fd-border">
+<article class="article-list-item ">
     <figure class="post-img">
         <a href="{$article.Url}">
         {if $article.Metas.fdsImage!=null}

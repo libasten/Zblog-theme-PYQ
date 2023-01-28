@@ -1,4 +1,4 @@
-<article class="single fd-border">
+<article class="single">
 	<h1 class="single-header">{$article.Title}</h1>
 	<div class="single-meta meta-top">
 		<span class="category"><i class="fa fa-fw fa-folder-open-o"></i>&nbsp;<a href="{$article.Category.Url}">{$article.Category.Name}</a></span>
@@ -13,7 +13,7 @@
 		<span class="tags"><i class="fa fa-fw fa-tags"></i>&nbsp;{foreach $article.Tags as $tag}<a href="{$tag.Url}">{$tag.Name}</a>{/foreach}</span>
 	</div>
 </article>
-<div class="single-navigation fd-border">
+<div class="single-navigation">
 	<div class="single-previous">
 		{if $article.Prev}
 		<a href="{$article.Prev.Url}" rel="prev"><span class="title-prefix">上一篇：</span><span>{$article.Prev.Title}</span></a>
@@ -29,7 +29,7 @@
 		{/if}
 	</div>
 </div>
-<div class="relates fd-border">
+<div class="relates">
 	<div class="title"><h3><i class="fa fa-newspaper-o"></i>&nbsp;相关推荐</h3></div>
 	{$array=GetList($zbp->option['ZC_RELATEDLIST_COUNT'],null,null,null,null,null,array('is_related'=>$article->ID));}
 	<ul id="related">
@@ -39,7 +39,7 @@
 	</ul>
 </div>
 {if !$article.IsLock}
-<div class="comments fd-border">
+<div class="comments">
 	{template:comments}
 	{template:commentpost}
 </div>

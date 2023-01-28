@@ -10,7 +10,7 @@ function ActivePlugin_PengYouQuan() {
 // 在顶部添加菜单    	    	 	    	 	     
 function PengYouQuan_AddMenu(&$m){    				        	 		 	  
     global $zbp;       	 	       	  	 	 
-    $m[] = MakeTopMenu("root", '朋友圈样式主题设置', $zbp->host . "zb_users/theme/PengYouQuan/editor.php", "", "topmenu_PengYouQuan","icon-nut-fill");    			         			 	   
+    $m[] = MakeTopMenu("root", '朋友圈 - 主题设置', $zbp->host . "zb_users/theme/PengYouQuan/editor.php", "", "topmenu_PengYouQuan","icon-nut-fill");    			         			 	   
 }
 
 function PengYouQuan_Filter_Plugin_Edit_Response5(){     		  		       	   		
@@ -32,13 +32,11 @@ function PengYouQuan_Filter_Plugin_Edit_Response5(){
 function InstallPlugin_PengYouQuan() {     	 	 		       	    	
     global $zbp;
     if(!$zbp->HasConfig('PengYouQuan')){
-		$zbp->Config('PengYouQuan')->description = '博客网站';
-        $zbp->Config('PengYouQuan')->keywords = '博客,网站';
-        $zbp->Config('PengYouQuan')->isImgLogo = 1;
-        $zbp->Config('PengYouQuan')->logo = $zbp->host . 'zb_users/theme/PengYouQuan/style/img/logo.png';
-        $zbp->Config('PengYouQuan')->favicon = $zbp->host . 'zb_users/theme/PengYouQuan/style/img/favicon.ico';
+        $zbp->Config('PengYouQuan')->favicon = $zbp->host . 'zb_users/theme/PengYouQuan/style/img/favicon.png';
         $zbp->Config('PengYouQuan')->avatar = $zbp->host . 'zb_users/theme/PengYouQuan/style/img/avatar.jpg';
         $zbp->Config('PengYouQuan')->topBackground = $zbp->host . 'zb_users/theme/PengYouQuan/style/img/topBackground.jpg';
+        $zbp->Config('PengYouQuan')->description = '朋友圈样式网站';
+        $zbp->Config('PengYouQuan')->keywords = '博客,网站,朋友圈';
 		$zbp->SaveConfig('PengYouQuan');
     }
 }    	 	 	 		      	  			
