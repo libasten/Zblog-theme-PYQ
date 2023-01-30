@@ -22,8 +22,8 @@
   <link href="{$host}zb_users/theme/{$theme}/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
   <link rel="icon" type="images/x-icon" href="{$zbp->Config('PengYouQuan')->favicon}">
   <link rel="shortcut icon" href="{$zbp->Config('PengYouQuan')->favicon}">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/irozhi/HarmonyOS-Sans/HarmonyOS_Sans_SC/HarmonyOS_Sans_SC_Medium.woff">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/irozhi/HarmonyOS-Sans/HarmonyOS_Sans_SC/HarmonyOS_Sans_SC_Medium.woff2">
+  <link rel="font" href="https://cdn.jsdelivr.net/gh/irozhi/HarmonyOS-Sans/HarmonyOS_Sans_SC/HarmonyOS_Sans_SC_Medium.woff">
+  <link rel="font" href="https://cdn.jsdelivr.net/gh/irozhi/HarmonyOS-Sans/HarmonyOS_Sans_SC/HarmonyOS_Sans_SC_Medium.woff2">
 </head>
 <div class="g-width g-block-center g-clear-both">
   {template:header}

@@ -29,9 +29,16 @@ html {
 }
 
 dl,
-dd,
-ul {
+dd {
     margin: 0;
+    padding: 0;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 body {
@@ -143,6 +150,12 @@ a {
     user-select: text;
 }
 
+.g-clear-both::after {
+    display: block;
+    clear: both;
+    content: '';
+}
+
 /* 开始 */
 .header {
     position: relative;
@@ -212,7 +225,7 @@ a {
 }
 
 main.content {
-    padding-top:30px;
+    padding-top: 30px;
     width: 100%;
     background-color: #fff;
 }
@@ -237,81 +250,198 @@ main.content {
 }
 
 article {
-    position: relative;
-    padding: 16px 18px 16px 18px;
-    overflow: hidden;
-    margin-bottom: 15px;
-}
-
-article figure {
-    float: left;
-    margin-left: 0;
-    width: 235px;
-    height: 150px;
-    border-radius: 2px;
+    padding: 15px 25px 0 25px;
     overflow: hidden;
 }
 
-article figure img {
-    width: 100%;
-    height: auto;
+article .post-avatar {
+    width: 36px;
+    height: 36px;
+    margin: 0 14px 0 0;
 }
 
-article .post-text {
-    margin-left: 250px;
-    font-size: 15px;
+article .post-main {
+    width: calc(100% - 50px);
+    border-bottom: 1px solid #f2f2f2;
 }
 
-article h2 {
-    font-size: 20px;
-    margin: 0px 0 9px 0;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;
-    white-space: normal;
-    color: #3d3d3d;
-    transition: color .2s;
+article .post-main header.post-header {
+    height: 22px;
+    padding: 2px 0 6px;
 }
 
-article h2:hover {
-    color: #222222;
-}
-
-article .post-content {
-    height: 50px;
-    line-height: 25px;
-    text-align: justify;
-    overflow: hidden;
-}
-
-article .post-content p {
-    margin: 0;
-}
-
-article .meta-bottom {
-    margin-top: 10px;
-    position: relative;
-}
-
-article .meta-bottom .tags {
-    display: inline-block;
-    margin-top: 5px;
-}
-
-article .meta-bottom .tags .fa-tags {
-    margin-right: 5px;
-}
-
-article .meta-bottom .tags a {
+article .post-main header.post-header .post-title {
+    max-width: 50%;
+    height: 20px;
+    color: #576b95;
     font-size: 14px;
-    margin-right: 8px;
-    background-color: #999;
-    color: #fff;
-    padding: 1px 5px;
-    transition: background-color 500ms;
+    line-height: 20px;
+    font-weight: 500;
 }
+
+article .post-main section.post-content {
+    padding: 0 0 14px;
+    font-size: 14px;
+    line-height: 22px;
+    word-break: break-all;
+}
+
+article .post-main section.post-content img {
+    max-width: 100%;
+}
+
+article .post-main section.post-attachcontent {
+    width: calc(100% * 2 / 3);
+    height: 20px;
+    padding: 0 0 6px;
+    color: #576b95;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+article .post-main footer.post-footer {
+    height: 34px;
+    padding: 0 0 14px;
+}
+
+article .post-main footer.post-footer .post-info {
+    width: calc(100% - 50px);
+    height: 20px;
+    color: #b2b2b2;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+article .post-main footer.post-footer .post-fun {
+    position: relative;
+    width: 30px;
+    height: 20px;
+    margin: 0 0 0 20px;
+}
+
+article .post-main footer.post-footer .post-fun .fun-ico {
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    background: #f7f7f7 url('img/post.fun.ico.light.svg') 50% 50% no-repeat;
+    cursor: pointer;
+}
+
+article .post-main footer.post-footer .post-fun .fun-box {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+    width: auto;
+    height: 38px;
+    margin: calc((24px + (7px * 2) - 20px) / 2 * -1) calc(30px + 5px) 0 0;
+    padding: 8px 0;
+    border-radius: 4px;
+    background-color: #4b5153;
+    animation: funbox-anim 0.3s;
+    animation-fill-mode: forwards;
+}
+
+article .post-main footer.post-footer .post-fun .fun-box .fun-btn {
+    position: relative;
+    height: 22px;
+    margin: 0 20px;
+    padding: 0 0 0 22px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 22px;
+    white-space: nowrap;
+    background-position: 0 50%;
+    background-repeat: no-repeat;
+}
+
+article .post-main footer.post-footer .post-fun .fun-box .fun-btn.allow {
+    cursor: pointer;
+}
+
+article .post-main footer.post-footer .post-fun .fun-box .fun-btn:first-child::after {
+    position: absolute;
+    top: 0;
+    right: -20px;
+    display: block;
+    width: 0;
+    height: 22px;
+    border-left: 1px solid #676f72;
+    content: '';
+}
+
+article .post-main footer.post-footer .post-fun .fun-box .like {
+    background-image: url('img/post.fun.btn.like.svg');
+}
+
+article .post-main footer.post-footer .post-fun .fun-box .comment {
+    background-image: url('img/post.fun.btn.comment.svg');
+}
+
+
+article .post-main aside.post-aside.show {
+    display: block;
+}
+
+article .post-main aside.post-aside {
+    display: none;
+    margin: 0 0 14px;
+    border-radius: 4px;
+    background-color: #f7f7f7;
+    overflow: hidden;
+}
+
+article .post-main aside.post-aside div.post-like::before {
+    display: inline;
+    float: left;
+    width: 18px;
+    height: 22px;
+    margin: 0 8px 0 0;
+    background-position: 0 50%;
+    background-repeat: no-repeat;
+    content: '';
+    background-image: url('img/post.aside.like.light.svg')
+}
+
+article .post-main aside.post-aside div.post-like ul.like-userslist {
+    flex-wrap: wrap;
+    width: calc(100% - 18px - 8px);
+}
+
+article .post-main aside.post-aside div.post-like ul.like-userslist li.like-name {
+    height: 22px;
+    color: #576b95;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+article .post-main aside.post-aside div.post-like.show+div.post-comment.show {
+    border-top: 1px solid #ececec;
+}
+
+article .post-main aside.post-aside div.fun-area.show {
+    display: block;
+}
+
+article .post-main aside.post-aside div.fun-area {
+    padding: 4px 12px;
+}
+
+article .post-main aside.post-aside div.fun-area.post-comment.index>ul.comment-itemslist div.comment-item {
+    line-height: 22px;
+}
+
+article .post-main aside.post-aside div.fun-area.post-comment>ul.comment-itemslist div.comment-item {
+    position: relative;
+    font-size: 14px;
+}
+
+article .post-main aside.post-aside div.fun-area.post-comment>ul.comment-itemslist span.comment-name,
+article .post-main aside.post-aside div.fun-area.post-comment>ul.comment-itemslist span.comment-name a {
+    color: #576b95;
+}
+
 
 /* 首页分页 */
 .pagination {
