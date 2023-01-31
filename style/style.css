@@ -218,7 +218,7 @@ a {
     bottom: -42px;
     width: calc(100% - 92px);
     height: 22px;
-    color: #b2b2b2;
+    color: #a2a2a2;
     font-size: 15px;
     line-height: 22px;
     text-align: right;
@@ -301,6 +301,7 @@ article .post-main section.post-attachcontent {
 article .post-main footer.post-footer {
     height: 34px;
     padding: 0 0 14px;
+    margin-bottom: 4px;
 }
 
 article .post-main footer.post-footer .post-info {
@@ -403,13 +404,14 @@ article .post-main footer.post-footer .post-fun .fun-box .comment {
 
 article .post-main aside.post-aside.show {
     display: block;
+    padding: 0 6px;
 }
 
 article .post-main aside.post-aside {
     display: none;
     margin: 0 0 14px;
     border-radius: 4px;
-    background-color: #f7f7f7;
+    background-color: #f4f4f4;
     overflow: hidden;
 }
 
@@ -437,32 +439,31 @@ article .post-main aside.post-aside div.post-like ul.like-userslist li.like-name
     line-height: 22px;
 }
 
-article .post-main aside.post-aside div.post-like.show+div.post-comment.show {
-    border-top: 1px solid #ececec;
-}
-
 article .post-main aside.post-aside div.fun-area.show {
     display: block;
 }
 
 article .post-main aside.post-aside div.fun-area {
-    padding: 4px 12px;
+    padding: 8px 6px 4px 6px;
 }
 
-article .post-main aside.post-aside div.fun-area.post-comment.index>ul.comment-itemslist div.comment-item {
-    line-height: 22px;
+/* 用在文章单页single中，修改点赞样式前面的图片为评论图标 */
+article .post-main aside.post-aside div.post-like-to-comment::before {
+    display: inline;
+    float: left;
+    width: 18px;
+    height: 22px;
+    margin: 0 8px 0 0;
+    background-position: 0 50%;
+    background-repeat: no-repeat;
+    content: '';
+    background-image: url('img/post.aside.comment.light.svg')
 }
 
-article .post-main aside.post-aside div.fun-area.post-comment>ul.comment-itemslist div.comment-item {
-    position: relative;
-    font-size: 14px;
-}
-
-article .post-main aside.post-aside div.fun-area.post-comment>ul.comment-itemslist span.comment-name,
-article .post-main aside.post-aside div.fun-area.post-comment>ul.comment-itemslist span.comment-name a {
+article .post-main aside.post-aside div.post-like-to-comment .like-name {
+    font-size: 15px;
     color: #576b95;
 }
-
 
 /* 首页分页 */
 .pagination {
@@ -470,16 +471,27 @@ article .post-main aside.post-aside div.fun-area.post-comment>ul.comment-itemsli
     text-align: center;
 }
 
-.pagination a,
-.now-page {
+.pagination a {
     display: inline-block;
     padding: 4px 10px;
     border-radius: 2px;
-    font-size: 16px;
-    line-height: 16px;
+    font-size: 14px;
+    line-height: 18px;
     height: 28px;
     color: #576b95;
-    background-color: #f4f4f4;
+    background-color: #e2e2e2;
+    transition: background-color 500ms;
+}
+
+.pagination .now-page {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 2px;
+    font-size: 14px;
+    line-height: 18px;
+    height: 28px;
+    color: #fff;
+    background-color: #07c160;
     transition: background-color 500ms;
 }
 
@@ -525,7 +537,7 @@ article .post-main aside.post-aside div.fun-area.post-comment>ul.comment-itemsli
     text-align: center;
     font-size: 12px;
     background-color: #fff;
-    border-top: 1px solid #cdcdcd;
+    border-top: 1px solid #e5e5e5;
 }
 
 /* rollbar ======================================================================================================== */
@@ -621,22 +633,17 @@ article .post-main aside.post-aside div.fun-area.post-comment>ul.comment-itemsli
     color: #444;
 }
 
-.comment-list h3 {
-    font-size: 16px;
-    margin: 0 0 12px 0;
-}
-
 .comment-list ul {
-    margin: 15px 0 0 0;
-    padding: 8px;
+    padding: 4px 8px;
     list-style: none;
-    border: 1px solid #dfdfdf;
+    border: 1px solid #ddd;
+    border-radius: 2px;
     font-size: 15px;
+    margin: 6px 0 6px 0;
 }
 
 .msgname {
     color: #444;
-    margin-bottom: 8px;
 }
 
 .msgarticle {
@@ -652,74 +659,109 @@ article .post-main aside.post-aside div.fun-area.post-comment>ul.comment-itemsli
 }
 
 .commentName {
-    font-weight: bold;
+    color: #576b95;
 }
 
 .commentTime {
     color: #888;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .revertcomment {
     float: right;
     margin-right: 2px;
-    color: #444;
-    font-size: 14px;
+    font-size: 12px;
+}
+
+.revertcomment a {
+    color: #576b95;
 }
 
 .revertcomment a:hover {
-    color: #222222;
+    color: #222;
 }
 
 .comment-post {
-    margin-top: 15px;
+    padding: 4px;
 }
 
-.comment-post .text {
+.comment-list .post p,
+.comment-post .post p {
+    margin: 0;
+}
+
+.comment-list .post p.posttop a,
+.comment-post .post p.posttop a {
+    font-size: 14px;
+    color: #576b95;
+}
+
+.comment-list .post.reply-frm p.posttop {
+    margin-top: 10px;
+}
+
+.comment-list .post form#frmSumbit>P>label,
+.comment-post .post form#frmSumbit>P>label {
+    font-size: 14px;
+    color: #858688;
     display: block;
-    margin-top: 5px;
+}
+
+.comment-list .text,
+.comment-post .text {
     width: 100%;
     font-size: 15px;
     padding: 4px;
+    color: #535351;
+    border-radius: 4px;
+    border: 1px solid #07c160;
+    outline: #07c160;
 }
 
 #txaArticle {
     font-size: 15px;
     padding: 4px;
-    font-family: 'Microsoft Yahei';
     width: 100%;
+    border-radius: 4px;
+    border: 1px solid #07c160;
+    outline: none;
+    resize: none;
+}
+
+.comment-list input.button {
+    transition: box-shadow 500ms;
+    font-size: 15px;
+    background-color: #07c160;
+    color: #fff;
+    border: 1px solid #07c160;
+    border-radius: 4px;
+    padding: 4px 16px;
+    cursor: pointer;
 }
 
 .comment-post input.button {
-    margin-top: 10px;
+    margin-top: 5px;
     transition: box-shadow 500ms;
     font-size: 15px;
+    background-color: #07c160;
+    color: #fff;
+    border: 1px solid #07c160;
+    border-radius: 4px;
+    padding: 4px 16px;
+    cursor: pointer;
 }
 
+.comment-list input.button:hover,
 .comment-post input.button:hover {
     cursor: pointer;
     box-shadow: 0 0 2px #222222;
 }
 
-.comment-post p {
-    margin-top: -5px;
-}
-
-#divCommentPost.reply-frm {
-    box-shadow: 0 0 5px #aaa;
-    border-radius: .25rem;
-    margin: .5rem .5rem 0 .5rem !important;
-    border-top: none;
-    padding: 0.1rem 0.5rem;
-}
-
-#divCommentPost.reply-frm #txaArticle {
-    margin: .5rem 0;
-}
 
 .commentpagebar {
     text-align: center;
-    margin: 15px auto;
+    max-height: 30px;
+    margin-top: 10px;
 }
 
 .commentpagebar a,
@@ -727,9 +769,9 @@ article .post-main aside.post-aside div.fun-area.post-comment>ul.comment-itemsli
     display: inline-block;
     padding: 4px 10px;
     border-radius: 2px;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 16px;
-    height: 28px;
+    height: 26px;
     color: #576b95;
     background-color: #e2e2e2;
     transition: background-color 500ms;
@@ -741,8 +783,7 @@ article .post-main aside.post-aside div.fun-area.post-comment>ul.comment-itemsli
 
 .commentpagebar .now-page {
     color: #fff;
-    background-color: #555555;
-    border: 1px solid #dee2e6;
+    background-color: #07c160;
 }
 
 /* 响应式样式 */

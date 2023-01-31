@@ -2,7 +2,6 @@
     <div class="post-avatar g-left">
         <img src="{$zbp->Config('PengYouQuan')->avatar}" alt="" class="g-alias-imgblock">
     </div>
-
     <div class="post-main g-right">
         <header class="post-header g-clear-both">
             <div class="post-title g-left g-txt-ellipsis g-user-select">{$article.Author.Alias}</div>
@@ -14,7 +13,7 @@
         <footer class="post-footer g-clear-both">
             <div class="post-info g-left g-txt-ellipsis"><span clsss="post-date">{$article.Time('Y-m-d')}</span></div>
             <div class="post-fun g-right">
-                <a href="{$article.Url}" target="_blank">
+                <a href="{$article.Url}">
                     <div class="fun-ico">互动交流</div>
                 </a>
             </div>
