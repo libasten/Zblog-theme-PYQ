@@ -3,7 +3,7 @@
 <html lang="zh-cn">
 <head>
     <meta charset="UTF-8"/>
-    <title>{if isset($zbp)}{$zbp.name}-{/if}公益404</title>
+    <title>{if isset($zbp)}{$zbp.name}-{/if}公益404页面</title>
     <style type="text/css">
         body,div,p,h1,h2,h3,h4{ margin: 0; padding: 0;}
         body{font:400 14px/1.333 "Tahoma",microsoft yahei; color: #333; /*background:url(images/bg_grey.png);*/ }
