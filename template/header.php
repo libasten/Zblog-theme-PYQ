@@ -20,7 +20,6 @@
   <meta name="description" content="{$title},{$name}">
   {/if}
   <link href="{$host}zb_users/theme/{$theme}/style/{$style}.css" rel="stylesheet">
-  <link href="{$host}zb_users/theme/{$theme}/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
   <link rel="icon" type="images/x-icon" href="{$zbp->Config('PengYouQuan')->favicon}">
   <link rel="shortcut icon" href="{$zbp->Config('PengYouQuan')->favicon}">
   <link rel="font" href="https://cdn.jsdelivr.net/gh/irozhi/HarmonyOS-Sans/HarmonyOS_Sans_SC/HarmonyOS_Sans_SC_Medium.woff">

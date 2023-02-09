@@ -24,7 +24,7 @@
 			{/if}
 
 			{/if}
-			<p><label for="txaArticle">正文(*)</label>
+			<p><label for="txaArticle">内容(*)</label>
 				<textarea name="txaArticle" id="txaArticle" class="text" cols="50" rows="4" tabindex="5" placeholder="期待您的留言评论。"></textarea>
 				<input name="sumbit" type="submit" tabindex="6" value="提交" onclick="return zbp.comment.post()" class="button" />
 			</p>

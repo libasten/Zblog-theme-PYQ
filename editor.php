@@ -54,6 +54,7 @@ if ($zbp->CheckPlugin('UEditor')) {
 						<li><a href="#tab1" class="default-tab current"><span>基础设置</span></a></li>
 						<li><a href="#tab2" class=""><span>SEO设置</span></a></li>
 						<li><a href="#tab3" class=""><span>关于主题</span></a></li>
+						<li><a href="#tab4" class=""><span>主题说明</span></a></li>
 					</ul>
 					<div class="clear"></div>
 				</div>
@@ -135,6 +136,16 @@ if ($zbp->CheckPlugin('UEditor')) {
 							</tr>
 						</table>
 					</div>
+					<div class="tab-content" style="border: none; padding: 0px; margin: 0px; display: none;" id="tab4">
+						<div style="padding:10px;">
+							<h2>感谢使用本主题</h2>
+							<div class="desc-list">
+								<div>1. 头像左侧的名称为后台“网站设置”中的网站标题，头像下侧的浅黑色“签名档”是网站副标题。</div>
+								<div>2. 本主题头部的头像和背景图在顶部在主题设置的“基础设置”中修改。</div>
+								<div>3. 页面列表中头像右侧的名称是发文章用户的“别名”，在后台“用户管理”中可以自行定义。</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 			<input type="submit" class="button" value="提交保存" style="margin:26px 0 6px 0" />
@@ -143,6 +154,9 @@ if ($zbp->CheckPlugin('UEditor')) {
 		<textarea name="ueimg" id="ueimg" style="display:none"></textarea>
 	</div>
 </div>
+<style>
+
+</style>
 
 <?php
 require $blogpath . 'zb_system/admin/admin_footer.php';
