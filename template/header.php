@@ -21,10 +21,7 @@
   {/if}
   <link rel="icon" type="images/x-icon" href="{$zbp->Config('PengYouQuan')->favicon}">
   <link rel="shortcut icon" href="{$zbp->Config('PengYouQuan')->favicon}">
-  <link rel="font" href="{$host}/zb_users/theme/PengYouQuan/style/font/HarmonyOS_Sans_SC_Medium.woff">
-  <link rel="font" href="{$host}/zb_users/theme/PengYouQuan/style/font/HarmonyOS_Sans_SC_Medium.woff2">
   <link href="{$host}zb_users/theme/{$theme}/style/{$style}.css" rel="stylesheet">
-  <link href="{$host}zb_users/theme/{$theme}/script/fancybox.css" rel="stylesheet">
   <!-- 灯箱用 -->
   <style type="text/css">span.view-image{cursor:zoom-in;}</style>
 </head>
