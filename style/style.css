@@ -159,7 +159,7 @@ a {
 /* 开始 */
 .header {
     position: relative;
-    height: 300px;
+    height: 276px;
     border-bottom: 1px solid #ccc;
 }
 
@@ -464,7 +464,9 @@ article .post-main aside.post-aside div.post-like-to-comment .like-name {
     font-size: 15px;
     color: #576b95;
 }
-
+article img{
+    max-width: 100%;
+}
 /* 首页分页 */
 .pagination {
     padding: 20px 10px;
@@ -561,7 +563,7 @@ article .post-main aside.post-aside div.post-like-to-comment .like-name {
     margin-top: 5px;
     text-align: center;
     opacity: .4;
-    filter: alpha(opacity=40);
+    filter: alpha(opacity=30);
 }
 
 .rollbar a {
@@ -569,8 +571,9 @@ article .post-main aside.post-aside div.post-like-to-comment .like-name {
     z-index: 2;
     display: block;
     height: 35px;
+    padding: 5px;
     border-radius: 2px;
-    background-color: #444;
+    background-color: #999;
     color: #fff;
 }
 
@@ -578,15 +581,11 @@ article .post-main aside.post-aside div.post-like-to-comment .like-name {
     color: #fff;
 }
 
-.rollbar .fa {
-    line-height: 32px;
-    font-size: 26px;
-}
 
 .rollbar li:hover,
 .rollbar li:hover h6 {
     opacity: .9;
-    filter: alpha(opacity=90)
+    filter: alpha(opacity=60)
 }
 
 .rollbar li:hover h6 {
@@ -705,7 +704,7 @@ article .post-main aside.post-aside div.post-like-to-comment .like-name {
     font-size: 14px;
     color: #858688;
     display: block;
-    margin-top:4px;
+    margin-top: 4px;
 }
 
 .comment-list .text,
@@ -719,12 +718,12 @@ article .post-main aside.post-aside div.post-like-to-comment .like-name {
     outline: #07c160;
 }
 
-.comment-post .text#inpVerify{
+.comment-post .text#inpVerify {
     margin-bottom: 2px;
 }
 
 
-.comment-post .text#inpVerify  + img{
+.comment-post .text#inpVerify+img {
     border-radius: 4px;
 }
 

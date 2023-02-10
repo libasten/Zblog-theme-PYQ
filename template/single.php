@@ -12,9 +12,15 @@
                         <div class="post-title g-left g-txt-ellipsis g-user-select">{$article.Author.Alias}</div>
                     </header>
                     <section class="post-content g-inline-justify g-user-select">
-                        {$article.Content}
+                        <!-- 嵌入了图片灯箱 -->
+                        {php}
+                        $pattern = "/<img(.*?)src=('|\")([^>]*).(bmp|gif|jpeg|jpg|png|icon)('|\")(.*?)>/i";
+                        $replacement = '<span class="view-image" href=$2$3.$4$5 title="'.$article->Title.'"><img$1class="ue-image" src=$2$3.$4$5 $6></span>';
+                        $content = preg_replace($pattern, $replacement, $article->Content);
+                        {/php}
+                        {$content}
                     </section>
-                    <section class="post-attachcontent g-txt-ellipsis g-user-select"><span class="attachcontent-text">南京市 · 江南秘境国际旅游度假区</span></section>
+                    <section class="post-attachcontent g-txt-ellipsis g-user-select"><span class="attachcontent-text">{$article.Metas.location}</span></section>
                     <footer class="post-footer g-clear-both">
                         <div class="post-info g-left g-txt-ellipsis"><span clsss="post-date">{$article.Time('Y-m-d')}</span></div>
                     </footer>
