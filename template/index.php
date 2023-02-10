@@ -1,6 +1,5 @@
 {template:header}
-<div class="g-width g-block-center g-clear-both">
-  {template:top}
+{template:top}
   <main class="content">
     <div class="article-list">
       {foreach $articles as $article}
@@ -14,4 +13,3 @@
   <div class="clear"></div>
   {template:backTop}
   {template:footer}
-</div>
