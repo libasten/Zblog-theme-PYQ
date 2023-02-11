@@ -128,7 +128,7 @@ if ($zbp->CheckPlugin('UEditor')) {
 					<div class="tab-content " style="border: none; padding: 0px; margin: 0px; display: none;" id="tab3">
 						<table style="padding:0px;margin:0px;width:100%;" class="table_hover table_striped">
 							<tr>
-								<td>0. 本主题适合发文字不长的博文，如果文字过长，不太建议使用。</td>
+								<td>0. 本主题适合发文字不长的博文，就像你发朋友圈一样。</td>
 							</tr>
 							<tr>
 								<td>1. 头像左侧的名称为后台“网站设置”中的网站标题，头像下侧的浅黑色“签名档”是网站副标题。</td>
@@ -137,7 +137,7 @@ if ($zbp->CheckPlugin('UEditor')) {
 								<td>2. 本主题头部的头像和背景图在顶部在主题设置的“基础设置”中修改。</td>
 							</tr>
 							<tr>
-								<td>3. 页面列表中头像右侧的名称是发文章用户的“别名”，在后台“用户管理”中可以自行定义。</td>
+								<td>3. 页面列表中头像右侧的名称是发文章用户的“别名”，在后台“用户管理”中设置，初次安装的如果没有显示内容，可能是您没有设置别名。</td>
 							</tr>
 							<tr>
 								<td>4. 每篇文章末尾的定位，在发表文章的时候自行设定，在“新建文章”的标题下方。</td>

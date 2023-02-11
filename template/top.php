@@ -1,3 +1,4 @@
+
 <body>
   <div class="g-width g-block-center g-clear-both">
     <div class="header">
@@ -7,7 +8,7 @@
           <a href="{$host}">{$name}</a>
         </div>
         <div class="avatar g-right">
-          <img src="{$zbp->Config('PengYouQuan')->avatar}" alt="">
+          <img src="{$zbp->Config('PengYouQuan')->avatar}" alt="avatar" />
         </div>
       </div>
       <div class="subinfo g-txt-ellipsis g-user-select">{$subname}</div>
