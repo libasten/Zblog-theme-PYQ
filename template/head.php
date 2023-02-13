@@ -1,6 +1,3 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -14,12 +11,11 @@
   {if $type=='page'}<title>{$title} - {$name}</title>
   <meta name="keywords" content="{$title},{$name},">
   <meta name="description" content="{$title},{$name}">{/if}
-  
   <link rel="icon" type="images/x-icon" href="{$zbp->Config('FriendCircle')->favicon}">
   <link rel="shortcut icon" href="{$zbp->Config('FriendCircle')->favicon}">
   <link href="{$host}zb_users/theme/{$theme}/style/{$style}.css" rel="stylesheet">
   <!-- 灯箱用 -->
-  <style type="text/css">
+  <style>
     span.view-image {
       cursor: zoom-in;
     }

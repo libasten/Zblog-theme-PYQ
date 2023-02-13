@@ -80,7 +80,7 @@ if ($zbp->CheckPlugin('UEditor')) {
 									</td>
 									<td>
 										<p>
-											<img id="pic_updatapic2" src="<?php echo $zbp->Config('FriendCircle')->topBackground ?>" width=200" height="100" style="border:1px #6f6f6f solid;"><br />
+											<img id="pic_updatapic2" src="<?php echo $zbp->Config('FriendCircle')->topBackground ?>" width="200" height="100" style="border:1px #6f6f6f solid;"><br />
 											<input id="updatapic2" name="btn" type="button" class="button btn-upload-img" value="更换图片" style="margin:5px 0 6px 0;" />
 										<div>图片路径：</div>
 										<input type="text" id="url_updatapic2" name="topBackground" style="width:100%" value="<?php echo $zbp->Config('FriendCircle')->topBackground ?>" />
@@ -137,7 +137,7 @@ if ($zbp->CheckPlugin('UEditor')) {
 								<td>2. 本主题头部的头像和背景图在顶部在主题设置的“基础设置”中修改。</td>
 							</tr>
 							<tr>
-								<td>3. 页面列表中头像右侧的名称是发文章用户的“别名”，在后台“用户管理”中设置，初次安装的如果没有显示内容，可能是您没有设置别名。</td>
+								<td>3. 页面列表中头像右侧的名称优先显示用户“别名”，在后台“用户管理”中设置。</td>
 							</tr>
 							<tr>
 								<td>4. 每篇文章末尾的定位，在发表文章的时候自行设定，在“新建文章”的标题下方。</td>

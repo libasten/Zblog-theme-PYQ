@@ -190,7 +190,7 @@ a {
 .brand .name a {
     color: #fff;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 19px;
     line-height: 26px;
     letter-spacing: 1px;
 }
@@ -249,47 +249,52 @@ main.content {
     margin-right: 4px;
 }
 
-article {
+div.article {
     padding: 15px 25px 0 25px;
     overflow: hidden;
 }
 
-article .post-avatar {
+div.article .post-avatar {
     width: 40px;
     height: 40px;
     margin: 0 14px 0 0;
 }
 
-article .post-main {
+div.article .post-main {
     width: calc(100% - 54px);
     border-bottom: 1px solid #e2e2e2;
 }
 
-article .post-main header.post-header {
+div.article .post-main header.post-header {
     height: 22px;
+    margin-bottom: 10px;
 }
 
-article .post-main header.post-header .post-title {
+div.article .post-main header.post-header .post-title {
     max-width: 50%;
     height: 22px;
     color: #576b95;
-    font-size: 16px;
+    font-size: 17px;
     line-height: 22px;
     font-weight: 500;
 }
 
-article .post-main section.post-content {
+div.article .post-main div.post-content {
     font-size: 16px;
     line-height: 24px;
     word-break: break-all;
     margin-top: 0px;
 }
 
-article .post-main section.post-content img {
+div.article .post-main div.post-content p:first-child {
+    margin-top: -5px;
+}
+
+div.article .post-main div.post-content img {
     max-width: 100%;
 }
 
-article .post-main section.post-attachcontent {
+div.article .post-main div.post-attachcontent {
     width: calc(100% * 2 / 3);
     height: 20px;
     padding: 0 0 6px;
@@ -298,13 +303,13 @@ article .post-main section.post-attachcontent {
     line-height: 20px;
 }
 
-article .post-main footer.post-footer {
+div.article .post-main footer.post-footer {
     height: 34px;
     padding: 0 0 14px;
     margin-bottom: 4px;
 }
 
-article .post-main footer.post-footer .post-info {
+div.article .post-main footer.post-footer .post-info {
     margin-top: 5px;
     width: calc(100% - 92px);
     height: 20px;
@@ -313,14 +318,14 @@ article .post-main footer.post-footer .post-info {
     line-height: 22px;
 }
 
-article .post-main footer.post-footer .post-fun {
+div.article .post-main footer.post-footer .post-fun {
     position: relative;
     width: 92px;
     line-height: 22px;
     text-align: center;
 }
 
-article .post-main footer.post-footer .post-fun .fun-ico {
+div.article .post-main footer.post-footer .post-fun .fun-ico {
     width: 100%;
     height: 100%;
     border-radius: 4px;
@@ -333,7 +338,7 @@ article .post-main footer.post-footer .post-fun .fun-ico {
     transition: background-color 500ms;
 }
 
-article .post-main footer.post-footer .post-fun .fun-ico::before {
+div.article .post-main footer.post-footer .post-fun .fun-ico::before {
     display: inline;
     float: left;
     width: 18px;
@@ -345,11 +350,11 @@ article .post-main footer.post-footer .post-fun .fun-ico::before {
     background-image: url('img/post.aside.comment.light.svg')
 }
 
-article .post-main footer.post-footer .post-fun .fun-ico:hover {
+div.article .post-main footer.post-footer .post-fun .fun-ico:hover {
     background-color: #e4e4e4;
 }
 
-article .post-main footer.post-footer .post-fun .fun-box {
+div.article .post-main footer.post-footer .post-fun .fun-box {
     display: flex;
     position: absolute;
     top: 0;
@@ -365,7 +370,7 @@ article .post-main footer.post-footer .post-fun .fun-box {
     animation-fill-mode: forwards;
 }
 
-article .post-main footer.post-footer .post-fun .fun-box .fun-btn {
+div.article .post-main footer.post-footer .post-fun .fun-box .fun-btn {
     position: relative;
     height: 22px;
     margin: 0 20px;
@@ -378,11 +383,11 @@ article .post-main footer.post-footer .post-fun .fun-box .fun-btn {
     background-repeat: no-repeat;
 }
 
-article .post-main footer.post-footer .post-fun .fun-box .fun-btn.allow {
+div.article .post-main footer.post-footer .post-fun .fun-box .fun-btn.allow {
     cursor: pointer;
 }
 
-article .post-main footer.post-footer .post-fun .fun-box .fun-btn:first-child::after {
+div.article .post-main footer.post-footer .post-fun .fun-box .fun-btn:first-child::after {
     position: absolute;
     top: 0;
     right: -20px;
@@ -393,21 +398,21 @@ article .post-main footer.post-footer .post-fun .fun-box .fun-btn:first-child::a
     content: '';
 }
 
-article .post-main footer.post-footer .post-fun .fun-box .like {
+div.article .post-main footer.post-footer .post-fun .fun-box .like {
     background-image: url('img/post.fun.btn.like.svg');
 }
 
-article .post-main footer.post-footer .post-fun .fun-box .comment {
+div.article .post-main footer.post-footer .post-fun .fun-box .comment {
     background-image: url('img/post.fun.btn.comment.svg');
 }
 
 
-article .post-main aside.post-aside.show {
+div.article .post-main aside.post-aside.show {
     display: block;
     padding: 0 6px;
 }
 
-article .post-main aside.post-aside {
+div.article .post-main aside.post-aside {
     display: none;
     margin: 0 0 14px;
     border-radius: 4px;
@@ -415,7 +420,7 @@ article .post-main aside.post-aside {
     overflow: hidden;
 }
 
-article .post-main aside.post-aside div.post-like::before {
+div.article .post-main aside.post-aside div.post-like::before {
     display: inline;
     float: left;
     width: 18px;
@@ -427,28 +432,28 @@ article .post-main aside.post-aside div.post-like::before {
     background-image: url('img/post.aside.like.light.svg')
 }
 
-article .post-main aside.post-aside div.post-like ul.like-userslist {
+div.article .post-main aside.post-aside div.post-like ul.like-userslist {
     flex-wrap: wrap;
     width: calc(100% - 18px - 8px);
 }
 
-article .post-main aside.post-aside div.post-like ul.like-userslist li.like-name {
+div.article .post-main aside.post-aside div.post-like ul.like-userslist li.like-name {
     height: 22px;
     color: #576b95;
     font-size: 14px;
     line-height: 22px;
 }
 
-article .post-main aside.post-aside div.fun-area.show {
+div.article .post-main aside.post-aside div.fun-area.show {
     display: block;
 }
 
-article .post-main aside.post-aside div.fun-area {
+div.article .post-main aside.post-aside div.fun-area {
     padding: 8px 6px 4px 6px;
 }
 
 /* 用在文章单页single中，修改点赞样式前面的图片为评论图标 */
-article .post-main aside.post-aside div.post-like-to-comment::before {
+div.article .post-main aside.post-aside div.post-like-to-comment::before {
     display: inline;
     float: left;
     width: 18px;
@@ -460,13 +465,15 @@ article .post-main aside.post-aside div.post-like-to-comment::before {
     background-image: url('img/post.aside.comment.light.svg')
 }
 
-article .post-main aside.post-aside div.post-like-to-comment .like-name {
+div.article .post-main aside.post-aside div.post-like-to-comment .like-name {
     font-size: 15px;
     color: #576b95;
 }
-article img{
+
+div.article img {
     max-width: 100%;
 }
+
 /* 首页分页 */
 .pagination {
     padding: 20px 10px;
