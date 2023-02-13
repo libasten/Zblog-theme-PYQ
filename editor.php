@@ -7,7 +7,7 @@ if (!$zbp->CheckRights($action)) {
 	$zbp->ShowError(6);
 	die();
 }
-if (!$zbp->CheckPlugin('PengYouQuan')) {
+if (!$zbp->CheckPlugin('FriendCircle')) {
 	$zbp->ShowError(48);
 	die();
 }
@@ -16,12 +16,12 @@ $blogtitle = '朋友圈主题设置';
 
 if (count($_POST) > 0) {
 	CheckIsRefererValid();
-	$zbp->Config('PengYouQuan')->keywords = $_POST['keywords'];
-	$zbp->Config('PengYouQuan')->description = $_POST['description'];
-	$zbp->Config('PengYouQuan')->favicon = $_POST['favicon'];
-	$zbp->Config('PengYouQuan')->avatar = $_POST['avatar'];
-	$zbp->Config('PengYouQuan')->topBackground = $_POST['topBackground'];
-	$zbp->SaveConfig('PengYouQuan');
+	$zbp->Config('FriendCircle')->keywords = $_POST['keywords'];
+	$zbp->Config('FriendCircle')->description = $_POST['description'];
+	$zbp->Config('FriendCircle')->favicon = $_POST['favicon'];
+	$zbp->Config('FriendCircle')->avatar = $_POST['avatar'];
+	$zbp->Config('FriendCircle')->topBackground = $_POST['topBackground'];
+	$zbp->SaveConfig('FriendCircle');
 	$zbp->BuildTemplate();
 	$zbp->SetHint('good');
 	Redirect('./editor.php');
@@ -67,10 +67,10 @@ if ($zbp->CheckPlugin('UEditor')) {
 									</td>
 									<td>
 										<p>
-											<img id="pic_updatapic1" src="<?php echo $zbp->Config('PengYouQuan')->avatar ?>" width="60" height="60" style="border:1px #6f6f6f solid;"><br/>
+											<img id="pic_updatapic1" src="<?php echo $zbp->Config('FriendCircle')->avatar ?>" width="60" height="60" style="border:1px #6f6f6f solid;"><br/>
 											<input id="updatapic1" name="btn" type="button" class="button btn-upload-img" value="更换图片" style="margin:5px 0 6px 0;" />
 										<div>图片路径：</div>
-										<input type="text" id="url_updatapic1" name="avatar" style="width:100%" value="<?php echo $zbp->Config('PengYouQuan')->avatar ?>" />
+										<input type="text" id="url_updatapic1" name="avatar" style="width:100%" value="<?php echo $zbp->Config('FriendCircle')->avatar ?>" />
 										</p>
 									</td>
 								</tr>
@@ -80,10 +80,10 @@ if ($zbp->CheckPlugin('UEditor')) {
 									</td>
 									<td>
 										<p>
-											<img id="pic_updatapic2" src="<?php echo $zbp->Config('PengYouQuan')->topBackground ?>" width=200" height="100" style="border:1px #6f6f6f solid;"><br />
+											<img id="pic_updatapic2" src="<?php echo $zbp->Config('FriendCircle')->topBackground ?>" width=200" height="100" style="border:1px #6f6f6f solid;"><br />
 											<input id="updatapic2" name="btn" type="button" class="button btn-upload-img" value="更换图片" style="margin:5px 0 6px 0;" />
 										<div>图片路径：</div>
-										<input type="text" id="url_updatapic2" name="topBackground" style="width:100%" value="<?php echo $zbp->Config('PengYouQuan')->topBackground ?>" />
+										<input type="text" id="url_updatapic2" name="topBackground" style="width:100%" value="<?php echo $zbp->Config('FriendCircle')->topBackground ?>" />
 										</p>
 									</td>
 								</tr>
@@ -93,10 +93,10 @@ if ($zbp->CheckPlugin('UEditor')) {
 									</td>
 									<td>
 										<p>
-											<img id="pic_updatapic3" src="<?php echo $zbp->Config('PengYouQuan')->favicon ?>" width="32" height="32" style="border:1px #6f6f6f solid;"><span class="note"> 最佳尺寸32 * 32</span><br />
+											<img id="pic_updatapic3" src="<?php echo $zbp->Config('FriendCircle')->favicon ?>" width="32" height="32" style="border:1px #6f6f6f solid;"><span class="note"> 最佳尺寸32 * 32</span><br />
 											<input id="updatapic3" name="btn" type="button" class="button btn-upload-img" value="更换图片" style="margin:5px 0 6px 0;" />
 										<div>图片路径：</div>
-										<input type="text" id="url_updatapic3" name="favicon" style="width:100%" value="<?php echo $zbp->Config('PengYouQuan')->favicon ?>" />
+										<input type="text" id="url_updatapic3" name="favicon" style="width:100%" value="<?php echo $zbp->Config('FriendCircle')->favicon ?>" />
 										</p>
 									</td>
 								</tr>
@@ -111,7 +111,7 @@ if ($zbp->CheckPlugin('UEditor')) {
 										<p><b>首页关键字（keywords）：</b><br><span class="note">关键词请用半角（半角）逗号隔开，不要出现引号和html标签。</span></p>
 									</td>
 									<td>
-										<p><input type="text" name="keywords" value="<?php echo $zbp->Config('PengYouQuan')->keywords; ?>" style="width:100%;" /></p>
+										<p><input type="text" name="keywords" value="<?php echo $zbp->Config('FriendCircle')->keywords; ?>" style="width:100%;" /></p>
 									</td>
 								</tr>
 								<tr>
@@ -119,7 +119,7 @@ if ($zbp->CheckPlugin('UEditor')) {
 										<p><b>网站描述（description）：</b><br><span class="note">建议不要超过200个字，不要出现引号和html标签。</span></p>
 									</td>
 									<td>
-										<p><textarea name="description" id="" rows="4" style="width:100%;font-family: Arial;"><?php echo $zbp->Config('PengYouQuan')->description; ?></textarea></p>
+										<p><textarea name="description" id="" rows="4" style="width:100%;font-family: Arial;"><?php echo $zbp->Config('FriendCircle')->description; ?></textarea></p>
 									</td>
 								</tr>
 							</tbody>

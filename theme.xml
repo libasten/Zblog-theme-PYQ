@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <theme version="php">
-<id>PengYouQuan</id>
+<id>FriendCircle</id>
 <name>微信朋友圈样式主题</name>
 <url>https://www.feidaoboke.com</url>
 <note>一款cos微信朋友圈样式的主题。</note>
@@ -19,8 +19,8 @@
   <url></url>
 </source>
 <adapted>151935</adapted>
-<version>1.7</version>
-<pubdate>2023-02-05</pubdate>
+<version>1.1</version>
+<pubdate>2023-02-10</pubdate>
 <modified>2023-02-13</modified>
 <price>39</price>
 <phpver>5.2</phpver>

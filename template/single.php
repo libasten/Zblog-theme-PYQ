@@ -6,7 +6,7 @@
     <div class="article-list">
         <article class="g-clear-both">
             <div class="post-avatar g-left">
-                <img src="{$zbp->Config('PengYouQuan')->avatar}" alt="avatar" class="g-alias-imgblock" />
+                <img src="{$zbp->Config('FriendCircle')->avatar}" alt="avatar" class="g-alias-imgblock" />
             </div>
             <div class="post-main g-right" style="border:none;">
                 <header class="post-header g-clear-both">

@@ -1,13 +1,13 @@
 <article class="g-clear-both">
     <div class="post-avatar g-left">
-        <img src="{$zbp->Config('PengYouQuan')->avatar}" alt="avatar" class="g-alias-imgblock" />
+        <img src="{$zbp->Config('FriendCircle')->avatar}" alt="avatar" class="g-alias-imgblock" />
     </div>
     <div class="post-main g-right">
         <header class="post-header g-clear-both">
             <div class="post-title g-left g-txt-ellipsis g-user-select">{$article.Author.Alias}</div>
         </header>
         <section class="post-content g-inline-justify g-user-select">
-        {$article->Content}
+        {$article.Content}
         </section>
         <section class="post-attachcontent g-txt-ellipsis g-user-select">
             {$article.Metas.location}

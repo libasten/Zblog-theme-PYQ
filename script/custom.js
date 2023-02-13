@@ -51,7 +51,7 @@ $(document).ready(function () {
 
 // 动态显示评价框
 zbp.plugin.unbind("comment.reply.start", "system")
-zbp.plugin.on("comment.reply.start", "PengYouQuan", function (id) {
+zbp.plugin.on("comment.reply.start", "FriendCircle", function (id) {
   var i = id
   $("#inpRevID").val(i)
   var frm = $('#divCommentPost')
@@ -79,14 +79,14 @@ zbp.plugin.on("comment.reply.start", "PengYouQuan", function (id) {
 })
 
 
-zbp.plugin.on("comment.got", "PengYouQuan", function () {
+zbp.plugin.on("comment.got", "FriendCircle", function () {
   $("#cancel-reply").click()
 })
 
-zbp.plugin.on("comment.post.success", "PengYouQuan", function () {
+zbp.plugin.on("comment.post.success", "FriendCircle", function () {
   $("#cancel-reply").click()
 })
 
-zbp.plugin.on("comment.post.start", "PengYouQuan", function () {
+zbp.plugin.on("comment.post.start", "FriendCircle", function () {
   $("#inpId").parent("form").find(":submit").val("提交中...");
 })

@@ -1,21 +1,21 @@
 <?php
 
-RegisterPlugin("PengYouQuan", "ActivePlugin_PengYouQuan");
+RegisterPlugin("FriendCircle", "ActivePlugin_FriendCircle");
 
-function ActivePlugin_PengYouQuan()
+function ActivePlugin_FriendCircle()
 {
-    Add_Filter_Plugin('Filter_Plugin_Admin_TopMenu', 'PengYouQuan_AddMenu');
-    Add_Filter_Plugin('Filter_Plugin_Edit_Response5', 'PengYouQuan_Filter_Plugin_Edit_Response5');
+    Add_Filter_Plugin('Filter_Plugin_Admin_TopMenu', 'FriendCircle_AddMenu');
+    Add_Filter_Plugin('Filter_Plugin_Edit_Response5', 'FriendCircle_Filter_Plugin_Edit_Response5');
 }
 
 // 在顶部添加菜单    	    	 	    	 	     
-function PengYouQuan_AddMenu(&$m)
+function FriendCircle_AddMenu(&$m)
 {
     global $zbp;
-    $m[] = MakeTopMenu("root", '朋友圈 - 主题设置', $zbp->host . "zb_users/theme/PengYouQuan/editor.php", "", "topmenu_PengYouQuan", "icon-nut-fill");
+    $m[] = MakeTopMenu("root", '朋友圈 - 主题设置', $zbp->host . "zb_users/theme/FriendCircle/editor.php", "", "topmenu_FriendCircle", "icon-nut-fill");
 }
 
-function PengYouQuan_Filter_Plugin_Edit_Response5()
+function FriendCircle_Filter_Plugin_Edit_Response5()
 {
     global $zbp, $article;
     echo '<div class="editmod"><label for="editor_content" class="editinputname">文章定位（样例：上海市·外滩28号）</label><br>
@@ -23,19 +23,19 @@ function PengYouQuan_Filter_Plugin_Edit_Response5()
     </div>';
 }
 
-function InstallPlugin_PengYouQuan()
+function InstallPlugin_FriendCircle()
 {
     global $zbp;
-    if (!$zbp->HasConfig('PengYouQuan')) {
-        $zbp->Config('PengYouQuan')->favicon = $zbp->host . 'zb_users/theme/PengYouQuan/style/img/favicon.png';
-        $zbp->Config('PengYouQuan')->avatar = $zbp->host . 'zb_users/theme/PengYouQuan/style/img/avatar.jpg';
-        $zbp->Config('PengYouQuan')->topBackground = $zbp->host . 'zb_users/theme/PengYouQuan/style/img/topBackground.jpg';
-        $zbp->Config('PengYouQuan')->description = '朋友圈样式网站';
-        $zbp->Config('PengYouQuan')->keywords = '博客,网站,朋友圈';
-        $zbp->SaveConfig('PengYouQuan');
+    if (!$zbp->HasConfig('FriendCircle')) {
+        $zbp->Config('FriendCircle')->favicon = $zbp->host . 'zb_users/theme/FriendCircle/style/img/favicon.png';
+        $zbp->Config('FriendCircle')->avatar = $zbp->host . 'zb_users/theme/FriendCircle/style/img/avatar.jpg';
+        $zbp->Config('FriendCircle')->topBackground = $zbp->host . 'zb_users/theme/FriendCircle/style/img/topBackground.jpg';
+        $zbp->Config('FriendCircle')->description = '朋友圈样式网站';
+        $zbp->Config('FriendCircle')->keywords = '博客,网站,朋友圈';
+        $zbp->SaveConfig('FriendCircle');
     }
 }
 
-function UninstallPlugin_PengYouQuan()
+function UninstallPlugin_FriendCircle()
 {
 }

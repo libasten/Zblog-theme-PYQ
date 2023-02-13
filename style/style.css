@@ -282,7 +282,7 @@ article .post-main section.post-content {
     font-size: 16px;
     line-height: 24px;
     word-break: break-all;
-    margin-top: -10px;
+    margin-top: 0px;
 }
 
 article .post-main section.post-content img {

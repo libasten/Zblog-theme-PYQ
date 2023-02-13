@@ -1,6 +1,6 @@
     <div class="footer">
         <div class="copyright">{$copyright}</div>
-        <div style="margin-top: 10px;">Powered By {$zblogphp}</div>
+        <div style="margin-top: 10px;">Powered By <a target="_blank" href="https://www.zblogcn.com/">{$zblogphp}</a></div>
     </div>
 </div>
 <script src="{$host}zb_system/script/jquery-2.2.4.min.js"></script>
