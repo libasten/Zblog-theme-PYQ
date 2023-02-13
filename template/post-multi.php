@@ -7,7 +7,7 @@
             <div class="post-title g-left g-txt-ellipsis g-user-select">{$article.Author.Alias}</div>
         </header>
         <section class="post-content g-inline-justify g-user-select">
-        {$article.Content}
+            {$article.Intro}
         </section>
         <section class="post-attachcontent g-txt-ellipsis g-user-select">
             {$article.Metas.location}
