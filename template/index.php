@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 {template:head}
-
+{$header}
 <body>
   <div class="g-width g-block-center g-clear-both">
     {template:top}
@@ -20,6 +20,7 @@
     {template:footer}
   </div>
   {template:bottom-script}
+  {$footer}
 </body>
 
 </html>

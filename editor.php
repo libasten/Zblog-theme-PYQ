@@ -146,7 +146,7 @@ if ($zbp->CheckPlugin('UEditor')) {
 								<td>5. 默认字体是鸿蒙字体，如果发表文章时候没有自定设定，则以鸿蒙字体显示。</td>
 							</tr>
 							<tr>
-								<td>本主题可能有些地方不是100%贴合您的需求，如有二次开发的需求，可通过<a href="https://www.feidaobokecom/"> 飞刀博客 </a>，欢迎联系飞刀本人进行定制。</td>
+								<td>本主题可能有些地方不是100%贴合您的需求，如有二次开发的需求，可通过<a href="https://www.feidaoboke.com/"> 飞刀博客 </a>，欢迎联系飞刀本人进行定制。</td>
 							</tr>
 						</table>
 					</div>
