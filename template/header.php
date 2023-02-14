@@ -9,9 +9,10 @@
   <title>{$title} - {$name}</title>
   <meta name="keywords" content="{foreach $article.Tags as $tag}{$tag.Name},{/foreach}{$name}" />
   <meta name="description" content="{php}echo preg_replace('/[\r\n\s]+/', '', trim(SubStrUTF8(FormatString($article->Intro,'[nohtml]'),100)).'...');{/php}" />
-  {else}<title>{$title} - {$name}</title>
+  {else}
+  <title>{$title} - {$name}</title>
   <meta name="keywords" content="{$title},{$name},">
-  <meta name="description" content="{$title},{$name}">{/else}
+  <meta name="description" content="{$title},{$name}">
   {/if}
   <link rel="icon" type="images/x-icon" href="{$zbp->Config('FriendCircle')->favicon}">
   <link rel="shortcut icon" href="{$zbp->Config('FriendCircle')->favicon}">
@@ -22,4 +23,5 @@
       cursor: zoom-in;
     }
   </style>
+  {$header}
 </head>

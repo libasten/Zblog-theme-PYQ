@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-{template:head}
-{$header}
+{template:header}
+
 <body>
   <div class="g-width g-block-center g-clear-both">
     {template:top}
@@ -17,10 +17,9 @@
     </main>
     <div class="clear"></div>
     {template:backTop}
-    {template:footer}
+    {template:bottom}
   </div>
-  {template:bottom-script}
-  {$footer}
+  {template:footer}
 </body>
 
 </html>
