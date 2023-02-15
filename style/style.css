@@ -292,6 +292,7 @@ div.article .post-main div.post-content p:first-child {
 
 div.article .post-main div.post-content img {
     max-width: 100%;
+    vertical-align: bottom;
 }
 
 div.article .post-main div.post-attachcontent {
@@ -806,6 +807,8 @@ div.article img {
 @media screen and (min-width: 550px) {
     .g-width {
         width: 550px;
+        border-left: 1px solid #dcdcdc;
+        border-right: 1px solid #dcdcdc;
     }
 }
 
@@ -813,5 +816,7 @@ div.article img {
     .g-width {
         width: 100%;
         min-width: 320px;
+        border-left: 1px solid #dcdcdc;
+        border-right: 1px solid #dcdcdc;
     }
 }

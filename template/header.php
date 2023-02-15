@@ -17,11 +17,5 @@
   <link rel="icon" type="images/x-icon" href="{$zbp->Config('FriendCircle')->favicon}">
   <link rel="shortcut icon" href="{$zbp->Config('FriendCircle')->favicon}">
   <link href="{$host}zb_users/theme/{$theme}/style/{$style}.css" rel="stylesheet">
-  <!-- 灯箱用 -->
-  <style>
-    span.view-image {
-      cursor: zoom-in;
-    }
-  </style>
   {$header}
 </head>

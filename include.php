@@ -6,6 +6,14 @@ function ActivePlugin_FriendCircle()
 {
     Add_Filter_Plugin('Filter_Plugin_Admin_TopMenu', 'FriendCircle_AddMenu');
     Add_Filter_Plugin('Filter_Plugin_Edit_Response5', 'FriendCircle_Filter_Plugin_Edit_Response5');
+    // 挂接灯箱插件脚本和样式
+    Add_Filter_Plugin('Filter_Plugin_Zbp_MakeTemplatetags', 'FriendCircle_MakeTemplatetags');
+}
+function FriendCircle_MakeTemplatetags()
+{
+    global $zbp;
+    $zbp->header .= '<style type="text/css">span.view-image{cursor:zoom-in;}</style>';
+    $zbp->footer .= '<script src="' . $zbp->host . 'zb_users/theme/FriendCircle/script/view-image.min.js"></script>';
 }
 
 // 在顶部添加菜单    	    	 	    	 	     
@@ -27,6 +35,7 @@ function InstallPlugin_FriendCircle()
 {
     global $zbp;
     if (!$zbp->HasConfig('FriendCircle')) {
+        $zbp->Config('FriendCircle')->fullArticle = "1";
         $zbp->Config('FriendCircle')->favicon = $zbp->host . 'zb_users/theme/FriendCircle/style/img/favicon.png';
         $zbp->Config('FriendCircle')->avatar = $zbp->host . 'zb_users/theme/FriendCircle/style/img/avatar.jpg';
         $zbp->Config('FriendCircle')->topBackground = $zbp->host . 'zb_users/theme/FriendCircle/style/img/topBackground.jpg';
