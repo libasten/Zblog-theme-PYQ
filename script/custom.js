@@ -93,13 +93,15 @@ zbp.plugin.on("comment.post.start", "FriendCircle", function () {
 
 // 打开搜索弹窗
 function showSearch() {
+  var hostURL = window.location.origin;
+  var pathname = window.location.pathname;
   $.confirm({
     title: '搜索内容',
     useBootstrap: false,
     boxWidth: '450px',
     backgroundDismiss: true,
     content: '' +
-      '<form action="/zb_system/cmd.php?act=search" method="post" id="search"  class="form-search">' +
+      '<form action="' + hostURL + pathname + '/zb_system/cmd.php?act=search" method="post" id="search"  class="form-search">' +
       '<div>' +
       '<input type="text" name="q" placeholder="请输入搜索关键字..." class="search-input form-control" required/>' +
       '</div>' +
