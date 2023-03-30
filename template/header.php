@@ -17,5 +17,6 @@
   <link rel="icon" type="images/x-icon" href="{$zbp->Config('FriendCircle')->favicon}">
   <link rel="shortcut icon" href="{$zbp->Config('FriendCircle')->favicon}">
   <link href="{$host}zb_users/theme/{$theme}/style/{$style}.css" rel="stylesheet">
+  <link href="{$host}zb_users/theme/{$theme}/script/jquery-confirm/jquery-confirm.min.css" rel="stylesheet">
   {$header}
 </head>

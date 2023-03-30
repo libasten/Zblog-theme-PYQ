@@ -90,3 +90,58 @@ zbp.plugin.on("comment.post.success", "FriendCircle", function () {
 zbp.plugin.on("comment.post.start", "FriendCircle", function () {
   $("#inpId").parent("form").find(":submit").val("提交中...");
 })
+
+// 打开搜索弹窗
+function showSearch() {
+  $.confirm({
+    title: '搜索内容',
+    useBootstrap: false,
+    boxWidth: '450px',
+    backgroundDismiss: true,
+    content: '' +
+      '<form action="/zb_system/cmd.php?act=search" method="post" id="search"  class="form-search">' +
+      '<div>' +
+      '<input type="text" name="q" placeholder="请输入搜索关键字..." class="search-input form-control" required/>' +
+      '</div>' +
+      '</form>',
+    buttons: {
+      submit: {
+        text: '搜索',
+        btnClass: 'btn-search-submit',
+        action: function () {
+          if ($('.search-input').val().trim() === '') {
+            $.confirm({
+              title: '提醒',
+              content: '关键字不能为空！',
+              useBootstrap: false,
+              boxWidth: '350px',
+              backgroundDismiss: true,
+              buttons: {
+                OK: {
+                  btnClass: 'btn-search-submit',
+                  text: '确定',
+                }
+              },
+            })
+            return false;
+          }
+          document.getElementById('search').submit();
+          return false;
+        }
+      },
+      cancel: {
+        text: '取消',
+        btnClass: 'btn-search-cancel',
+      },
+    },
+  });
+}
+
+// <form class="form" method="post" id="search" action="{$host}zb_system/cmd.php?act=search">
+//                         <div>
+//                             <input type="text" class="form-control m-b-30 m-t-30" placeholder="Keywords..." name="q"  style="font-size:1.5rem;padding:1rem;height:auto;"/>
+//                             <div class="text-center m-b-30">
+//                                 <a  href="javascript:void(0)" class="btn btn-default btn-style hvr-shutter-out-vertical" style="font-size:1.5rem;width:120px;" onclick="document.getElementById('search').submit();return false;"> Search </a>
+//                             </div>
+//                         </div>
+//                     </form>
