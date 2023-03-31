@@ -1,13 +1,11 @@
 <div class="header">
   <div class="header-background" style="background-image:url({$zbp->Config('FriendCircle')->topBackground})">
     <div class="tool-right">
-      <div class="search-tool" title="搜索" data-bs-toggle="modal" data-bs-target="#searchDialog"></div>
-      <!-- <div class="search-tool" title="搜索" onclick="showSearch()"></div> -->
-      <div class="camera-tool" title="登录管理" data-bs-toggle="modal" data-bs-target="#contorPanelDialog"></div>
+      <div class="search-tool" title="搜索" data-toggle="modal" data-target="#searchDialog"></div>
+      <div class="camera-tool" title="登录管理" data-toggle="modal" data-target="#contorPanelDialog"></div>
     </div>
-
     <div class="tool-left">
-      <div class="nav-tool" title="导航" data-bs-toggle="modal" data-bs-target="#navbarDialog"></div>
+      <div class="nav-tool" title="导航" data-toggle="modal" data-target="#navbarDialog"></div>
     </div>
   </div>
   <div class="brand clear">
@@ -25,7 +23,9 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="controlPanelModalLabel">管理面板</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
         <div class="modal-body" style="padding-bottom:25px;">
           {module:controlpanel}
@@ -39,13 +39,17 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="searchModalLabel">内容搜索</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
         <div class="modal-body" style="padding-bottom:30px;">
           <form action="zb_system/cmd.php?act=search" method="post" id="search" class="form-search">
             <div class="input-group">
               <input type="text" name="q" placeholder="请输入搜索关键字..." class="search-input form-control" required />
-              <span class="input-group-text btn-search" onclick="document.getElementById('search').submit();return false;">搜索</span>
+              <div class="input-group-append">
+                <span class="input-group-text btn-search" onclick="document.getElementById('search').submit();return false;">搜索</span>
+              </div>
             </div>
           </form>
         </div>
@@ -58,7 +62,9 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="controlPanelModalLabel">网站导航</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
         <div class="modal-body" style="padding-bottom:25px;">
           {module:navbar}
