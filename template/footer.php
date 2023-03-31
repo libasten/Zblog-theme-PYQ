@@ -4,6 +4,6 @@
 <!-- 灯箱 -->
 <script src="{$host}zb_users/theme/{$theme}/script/view-image.min.js"></script>
 <!-- 弹窗 -->
-<script src="{$host}zb_users/theme/{$theme}/script/jquery-confirm/jquery-confirm.min.js"></script>
+<script src="{$host}zb_users/theme/{$theme}/script/bootstrap/bootstrap.min.js"></script>
 <script src="{$host}zb_users/theme/{$theme}/script/custom.js"></script>
 {$footer}

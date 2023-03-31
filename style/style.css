@@ -202,39 +202,44 @@ a {
     top: 20px;
 }
 
-.header .header-background .tool-left .back-tool {
-    background: url(img/back.png) no-repeat;
-    background-size: 23px 23px;
-    width: 23px;
-    height: 23px;
+.header .header-background .tool-left .nav-tool {
+    background: url(img/menu.png) no-repeat;
+    background-size: 25px 25px;
+    width: 25px;
+    height: 25px;
     display: inline-block;
     cursor: pointer;
 }
 
-/* 搜索弹窗 */
-.form-search .search-input {
-    width: 100%;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-    outline: none;
-    padding: 6px 10px;
+/* 弹窗样式 */
+.modal .modal-header {
+    padding: 0.6rem 1rem;
 }
 
-.form-search .search-input:focus {
-    border: 1px solid #1AAD19;
+.modal .modal-header h5 {
+    font-size: 1.1rem;
 }
 
-.jconfirm .btn-search-cancel {
-    font-weight: 500 !important;
+.modal .modal-header .btn-close {
+    font-size: 0.9rem;
 }
 
-.jconfirm .btn-search-submit {
-    color: #fff;
-    font-weight: 500 !important;
-    background-color: #1AAD19 !important;
+.modal .modal-body a {
+    color: #1AAD19;
+    text-decoration: none;
+    border-bottom: 1px solid #07c160;
+    display: inline-block;
+    margin-right: 5px;
 }
 
+.modal .btn-search {
+    background-color: #07c160;
+    border: 1px solid #07c160;
+    color: #f2f2f2;
+    cursor: pointer;
+}
+
+/* 搜索结果 */
 .search-result-tip {
     margin: 0 25px 20px 25px;
     text-align: center;
@@ -245,7 +250,7 @@ a {
 .search-result-tip .keyword {
     color: #1AAD19;
     font-weight: 700;
-    margin:0 4px;
+    margin: 0 4px;
 }
 
 .no-result-tip {
@@ -256,7 +261,7 @@ a {
 .no-result-tip .keyword {
     color: #1AAD19;
     font-weight: 700;
-    margin:0 4px;
+    margin: 0 4px;
 }
 
 .no-result-tip .back-index {
@@ -292,6 +297,7 @@ a {
     font-size: 19px;
     line-height: 26px;
     letter-spacing: 1px;
+    /* text-decoration:none;    */
 }
 
 .brand .avatar {
@@ -576,6 +582,7 @@ div.article img {
 
 /* 首页分页 */
 .pagination {
+    display: block;
     padding: 20px 10px;
     text-align: center;
 }
@@ -712,6 +719,10 @@ div.article img {
     margin: 0 0 15px;
     padding: 15px;
     color: #444;
+}
+
+.comment-list label {
+    display: block;
 }
 
 .comment-list ul {

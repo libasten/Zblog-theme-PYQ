@@ -101,7 +101,7 @@ function showSearch() {
     boxWidth: '450px',
     backgroundDismiss: true,
     content: '' +
-      '<form action="' + hostURL + pathname + '/zb_system/cmd.php?act=search" method="post" id="search"  class="form-search">' +
+      '<form action="' + hostURL + pathname + 'zb_system/cmd.php?act=search" method="post" id="search"  class="form-search">' +
       '<div>' +
       '<input type="text" name="q" placeholder="请输入搜索关键字..." class="search-input form-control" required/>' +
       '</div>' +
@@ -138,12 +138,3 @@ function showSearch() {
     },
   });
 }
-
-// <form class="form" method="post" id="search" action="{$host}zb_system/cmd.php?act=search">
-//                         <div>
-//                             <input type="text" class="form-control m-b-30 m-t-30" placeholder="Keywords..." name="q"  style="font-size:1.5rem;padding:1rem;height:auto;"/>
-//                             <div class="text-center m-b-30">
-//                                 <a  href="javascript:void(0)" class="btn btn-default btn-style hvr-shutter-out-vertical" style="font-size:1.5rem;width:120px;" onclick="document.getElementById('search').submit();return false;"> Search </a>
-//                             </div>
-//                         </div>
-//                     </form>
