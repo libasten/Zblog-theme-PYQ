@@ -19,7 +19,7 @@
   <div class="subinfo g-txt-ellipsis g-user-select">{$subname}</div>
   <!-- 控制面板弹窗 -->
   <div class="modal fade" id="contorPanelDialog" tabindex="-1" aria-labelledby="controlPanelModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" style="width:450px">
+    <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="controlPanelModalLabel">管理面板</h5>
@@ -35,7 +35,7 @@
   </div>
   <!-- 搜索弹窗 -->
   <div class="modal fade" id="searchDialog" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" style="width:450px">
+    <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="searchModalLabel">内容搜索</h5>
@@ -58,7 +58,7 @@
   </div>
   <!-- 导航弹窗 -->
   <div class="modal fade" id="navbarDialog" tabindex="-1" aria-labelledby="controlPanelModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" style="width:250px">
+    <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="controlPanelModalLabel">网站导航</h5>
