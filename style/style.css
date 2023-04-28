@@ -391,10 +391,6 @@ div.article .post-main div.post-content {
     margin-top: 0px;
 }
 
-div.article .post-main div.post-content p:first-child {
-    margin-top: -5px;
-}
-
 div.article .post-main div.post-content img {
     max-width: 100%;
     vertical-align: bottom;

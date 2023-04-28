@@ -36,6 +36,7 @@ function InstallPlugin_FriendCircle()
     global $zbp;
     if (!$zbp->HasConfig('FriendCircle')) {
         $zbp->Config('FriendCircle')->fullArticle = "1";
+        $zbp->Config('FriendCircle')->readMore = "1";
         $zbp->Config('FriendCircle')->favicon = $zbp->host . 'zb_users/theme/FriendCircle/style/img/favicon.png';
         $zbp->Config('FriendCircle')->avatar = $zbp->host . 'zb_users/theme/FriendCircle/style/img/avatar.jpg';
         $zbp->Config('FriendCircle')->topBackground = $zbp->host . 'zb_users/theme/FriendCircle/style/img/topBackground.jpg';

@@ -9,22 +9,32 @@
       {/php}
       <div class="post-title g-left g-txt-ellipsis g-user-select">{$authorName}</div>
     </header>
-    <div class="post-content g-inline-justify g-user-select">
+    <div class="post-content g-inline-justify g-user-select" id="article-{$article.ID}">
       {php}
       $pattern = "/<img(.*?)src=('|\")([^>]*).(bmp|gif|jpeg|jpg|png|icon)('|\")(.*?)>/i";
-        $replacement = '<span class="view-image" href=$2$3.$4$5 title="'.$article->Title.'"><img$1class="ue-image" src=$2$3.$4$5 $6></span>';
-        {/php}
-        {if $zbp.Config('FriendCircle').fullArticle}
+      $replacement = '<span class="view-image" href=$2$3.$4$5 title="'.$article->Title.'"><img$1class="ue-image" src=$2$3.$4$5 $6></span>';
+      {/php}
+      {if $zbp.Config('FriendCircle').fullArticle}
         {php}
         $content = preg_replace($pattern, $replacement, $article->Content);
-        echo($content)
         {/php}
+        {if $zbp.Config('FriendCircle').readMore}
+          <div id="fold-article-{$article.ID}" class="fold-box">
+          {php}
+          echo($content)
+          {/php}
+          </div>
         {else}
+          {php}
+          echo($content)
+          {/php}
+        {/if}
+      {else}
         {php}
         $intro = preg_replace($pattern, $replacement, $article->Intro);
         echo($intro)
         {/php}
-        {/if}
+      {/if}
     </div>
     <div class="post-attachcontent g-txt-ellipsis g-user-select">
       {$article.Metas.location}

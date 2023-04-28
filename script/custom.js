@@ -18,6 +18,25 @@ $(document).ready(function () {
     $('.nav-menu').slideToggle(200);
     $('.menu-btn').toggleClass('open')
   });
+
+
+  if ($(".fold-box").length > 0) {
+    $(".fold-box").each(function () {
+      if ($(this).height() > 180) {
+        $(this).height("180px");
+        $(this).css("overflow", 'hidden');
+        $(this).after('<div class="read-more" style="color:#2c54a8;margin-top:10px;font-size:1.02rem;cursor:pointer">展开</div>');
+        $('.read-more').on('click', function () {
+          var articlaID = $(this).parent()[0].id.split("-")[1];
+          $('#fold-article-' + articlaID).height('auto');
+          // console.log($('#fold-box-' + articlaID).id)
+          // $(this).hide();
+          // $('#fold-box-' + articlaID).after('<div class="read-more" style="color:#2c54a8;margin-top:10px;font-size:1.02rem;cursor:pointer">收起</div>');
+        });
+      }
+    });
+  }
+
   // 插入图片
   // 检测UEditor插件是否存在
   if ('UE' in window) {

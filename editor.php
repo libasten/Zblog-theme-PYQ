@@ -22,6 +22,7 @@ if (count($_POST) > 0) {
 	$zbp->Config('FriendCircle')->avatar = $_POST['avatar'];
 	$zbp->Config('FriendCircle')->topBackground = $_POST['topBackground'];
 	$zbp->Config('FriendCircle')->fullArticle = $_POST['fullArticle'];
+	$zbp->Config('FriendCircle')->readMore = $_POST['readMore'];
 	$zbp->SaveConfig('FriendCircle');
 	$zbp->BuildTemplate();
 	$zbp->SetHint('good');
@@ -64,10 +65,18 @@ if ($zbp->CheckPlugin('UEditor')) {
 							<tbody>
 								<tr>
 									<td>
-										<p><b>首页是否全文输出</b><br><span class="note">开启后，首页不再以文章摘要形式展示。</span></p>
+										<p><b>列表页是否全文输出</b><br><span class="note">开启后，文章列表页不再以文章摘要形式展示。</span></p>
 									</td>
 									<td>
 										<input id="fullArticle" name="fullArticle" class="checkbox" type="text" value="<?php echo (bool) $zbp->Config('FriendCircle')->fullArticle; ?>" size="100" /><br />
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<p><b>列表页是否自动折叠</b><br><span class="note">只有在开启全文情况下有效<br />开启后，列表自动添加“阅读全文”的按钮。</span></p>
+									</td>
+									<td>
+										<input id="readMore" name="readMore" class="checkbox" type="text" value="<?php echo (bool) $zbp->Config('FriendCircle')->readMore; ?>" size="100" /><br />
 									</td>
 								</tr>
 								<tr>
@@ -76,8 +85,8 @@ if ($zbp->CheckPlugin('UEditor')) {
 									</td>
 									<td>
 										<p>
-											<img id="pic_updatapic1" src="<?php echo $zbp->Config('FriendCircle')->avatar ?>" width="60" height="60" style="border:1px #6f6f6f solid;"><br />
-											<input id="updatapic1" name="btn" type="button" class="button btn-upload-img" value="更换图片" style="margin:5px 0 6px 0;" />
+											<img id="pic_updatapic1" src="<?php echo $zbp->Config('FriendCircle')->avatar ?>" width="60" height="60" style="border:1px #6f6f6f solid;display:inline-block;"><br />
+											<input id="updatapic1" name="btn" type="button" class="button btn-upload-img" value="更换图片" style="margin:5px 0 6px 0;display:inline-block;" />
 										<div>图片路径：</div>
 										<input type="text" id="url_updatapic1" name="avatar" style="width:100%" value="<?php echo $zbp->Config('FriendCircle')->avatar ?>" />
 										</p>
