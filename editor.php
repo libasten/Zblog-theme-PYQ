@@ -85,8 +85,8 @@ if ($zbp->CheckPlugin('UEditor')) {
 									</td>
 									<td>
 										<p>
-											<img id="pic_updatapic1" src="<?php echo $zbp->Config('FriendCircle')->avatar ?>" width="60" height="60" style="border:1px #6f6f6f solid;display:inline-block;"><br />
-											<input id="updatapic1" name="btn" type="button" class="button btn-upload-img" value="更换图片" style="margin:5px 0 6px 0;display:inline-block;" />
+											<img id="pic_updatapic1" src="<?php echo $zbp->Config('FriendCircle')->avatar ?>" width="60" height="60" style="border:1px #afafaf solid;margin-bottom:-9px;">
+											<input id="updatapic1" name="btn" type="button" class="button btn-upload-img" value="更换图片" />
 										<div>图片路径：</div>
 										<input type="text" id="url_updatapic1" name="avatar" style="width:100%" value="<?php echo $zbp->Config('FriendCircle')->avatar ?>" />
 										</p>
@@ -98,8 +98,8 @@ if ($zbp->CheckPlugin('UEditor')) {
 									</td>
 									<td>
 										<p>
-											<img id="pic_updatapic2" src="<?php echo $zbp->Config('FriendCircle')->topBackground ?>" width="200" height="100" style="border:1px #6f6f6f solid;"><br />
-											<input id="updatapic2" name="btn" type="button" class="button btn-upload-img" value="更换图片" style="margin:5px 0 6px 0;" />
+											<img id="pic_updatapic2" src="<?php echo $zbp->Config('FriendCircle')->topBackground ?>" width="200" height="100" style="border:1px #afafaf solid;margin-bottom:-9px;">
+											<input id="updatapic2" name="btn" type="button" class="button btn-upload-img" value="更换图片" />
 										<div>图片路径：</div>
 										<input type="text" id="url_updatapic2" name="topBackground" style="width:100%" value="<?php echo $zbp->Config('FriendCircle')->topBackground ?>" />
 										</p>
@@ -107,12 +107,12 @@ if ($zbp->CheckPlugin('UEditor')) {
 								</tr>
 								<tr>
 									<td>
-										<p><b>favicon</b><br><span class="note">收藏夹图标，如您不了解可不作修改。</span></p>
+										<p><b>favicon</b><br><span class="note">收藏夹图标，如您不了解可不作修改。<br/> 最佳尺寸32 * 32</p>
 									</td>
 									<td>
 										<p>
-											<img id="pic_updatapic3" src="<?php echo $zbp->Config('FriendCircle')->favicon ?>" width="32" height="32" style="border:1px #6f6f6f solid;"><span class="note"> 最佳尺寸32 * 32</span><br />
-											<input id="updatapic3" name="btn" type="button" class="button btn-upload-img" value="更换图片" style="margin:5px 0 6px 0;" />
+											<img id="pic_updatapic3" src="<?php echo $zbp->Config('FriendCircle')->favicon ?>" width="50" height="50" style="border:1px #afafaf solid;margin-bottom:-9px;">
+											<input id="updatapic3" name="btn" type="button" class="button btn-upload-img" value="更换图片"  />
 										<div>图片路径：</div>
 										<input type="text" id="url_updatapic3" name="favicon" style="width:100%" value="<?php echo $zbp->Config('FriendCircle')->favicon ?>" />
 										</p>
