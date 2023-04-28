@@ -297,7 +297,7 @@ a {
     font-size: 19px;
     line-height: 26px;
     letter-spacing: 1px;
-    /* text-decoration:none;    */
+    text-decoration: none;
 }
 
 .brand .avatar {
@@ -400,6 +400,7 @@ div.article .post-main div.post-attachcontent {
     width: calc(100% * 2 / 3);
     height: 20px;
     padding: 0 0 6px;
+    margin-top: 10px;
     color: #576b95;
     font-size: 14px;
     line-height: 20px;
@@ -552,6 +553,19 @@ div.article .post-main aside.post-aside div.fun-area.show {
 
 div.article .post-main aside.post-aside div.fun-area {
     padding: 8px 6px 4px 6px;
+}
+
+/* 列表页展开与收起 */
+/* .fold-box.more{
+    height: 180px;
+    overflow: hidden;
+}
+.fold-box.more::after{
+
+} */
+
+.fold-box {
+    transition: height 1.5s ease !important;
 }
 
 /* 用在文章单页single中，修改点赞样式前面的图片为评论图标 */
