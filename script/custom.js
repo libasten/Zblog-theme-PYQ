@@ -26,7 +26,7 @@ $(document).ready(function () {
         var aID = $(this).attr('id').split("-")[2];
         $(this).height('180px');
         $(this).css('overflow', 'hidden');
-        $(this).after('<div class="read-more" style="color:#2c54a8;margin-top:10px;font-size:1.02rem;cursor:pointer">展开</div>');
+        $(this).after('<div class="read-more" style="color:#576b95;margin-top:10px;cursor:pointer">展开</div>');
         $('#article-' + aID + ' .read-more').on('click', function () {
           if ($(this).text() === '展开') {
             $('#fold-article-' + aID).height('auto');

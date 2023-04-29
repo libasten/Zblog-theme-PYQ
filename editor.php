@@ -146,7 +146,7 @@ if ($zbp->CheckPlugin('UEditor')) {
 					<div class="tab-content " style="border: none; padding: 0px; margin: 0px; display: none;" id="tab3">
 						<table style="padding:0px;margin:0px;width:100%;" class="table_hover table_striped">
 							<tr>
-								<td>0. 本主题适合发文字不长的博文，就像你发朋友圈一样。</td>
+								<td>0. 若要发布文字较多的文章，并需在列表页中全文输出，建议在“基础设置”中开启自动折叠功能。</td>
 							</tr>
 							<tr>
 								<td>1. 头像左侧的名称为后台“网站设置”中的网站标题，头像下侧的浅黑色“签名档”是网站副标题。</td>
@@ -158,7 +158,7 @@ if ($zbp->CheckPlugin('UEditor')) {
 								<td>3. 页面列表中头像右侧的名称优先显示用户“别名”，在后台“用户管理”中设置。</td>
 							</tr>
 							<tr>
-								<td>4. 每篇文章末尾的定位，在发表文章的时候自行设定，在“新建文章”的标题下方。</td>
+								<td>4. 每篇文章末尾的定位，要在发表文章的时候自行设定，在“新建文章”的标题下方任意输入地点名称。</td>
 							</tr>
 							<tr>
 								<td>5. 默认字体是鸿蒙字体，如果发表文章时候没有自定设定，则以鸿蒙字体显示。</td>

@@ -555,19 +555,6 @@ div.article .post-main aside.post-aside div.fun-area {
     padding: 8px 6px 4px 6px;
 }
 
-/* 列表页展开与收起 */
-/* .fold-box.more{
-    height: 180px;
-    overflow: hidden;
-}
-.fold-box.more::after{
-
-} */
-
-.fold-box {
-    transition: height 1.5s ease !important;
-}
-
 /* 用在文章单页single中，修改点赞样式前面的图片为评论图标 */
 div.article .post-main aside.post-aside div.post-like-to-comment::before {
     display: inline;
