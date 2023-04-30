@@ -26,12 +26,15 @@
               {/php}
               {$content}
             </div>
+            {if !empty($article->Metas->location)}
             <div class="post-attachcontent g-txt-ellipsis g-user-select">
               {$article.Metas.location}
             </div>
+            {/if}
             <footer class="post-footer g-clear-both">
               <div class="post-info g-left g-txt-ellipsis">{$article.Time('Y-m-d')}</div>
             </footer>
+            {if !$article.IsLock}
             <aside class="post-aside show">
               <div class="fun-area post-like-to-comment g-clear-both show">
                 <ul class="like-userslist g-left-flex">
@@ -39,8 +42,8 @@
                 </ul>
               </div>
               {template:comments}
-
             </aside>
+            {/if}
           </div>
         </div>
       </div>

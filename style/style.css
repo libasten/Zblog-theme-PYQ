@@ -135,6 +135,7 @@ a {
     height: 100%;
     object-fit: cover;
     object-position: 50% 50%;
+    border-radius: 5px;
 }
 
 .g-alias-videoblock {
@@ -418,7 +419,7 @@ div.article .post-main footer.post-footer .post-info {
     height: 20px;
     color: #b2b2b2;
     font-size: 14px;
-    line-height: 22px;
+    line-height: 20px;
 }
 
 div.article .post-main footer.post-footer .post-fun {
