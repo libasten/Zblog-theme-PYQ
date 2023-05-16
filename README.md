@@ -1,10 +1,4 @@
 # ZBlog 朋友圈样式 主题
-# Todo
-## 部署鸿蒙字体
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/irozhi/HarmonyOS-Sans/HarmonyOS_Sans_SC/HarmonyOS_Sans_SC_Medium.woff">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/irozhi/HarmonyOS-Sans/HarmonyOS_Sans_SC/HarmonyOS_Sans_SC_Medium.woff2">
-
-## 。。跳转到详情页面，再组织评论内容。
 
 ## php转换 xx时间之前参考
 https://blog.csdn.net/qq_41904362/article/details/108124544

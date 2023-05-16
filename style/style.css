@@ -396,6 +396,10 @@ div.article .post-main div.post-content img {
     max-width: 100%;
     vertical-align: bottom;
 }
+div.article .post-main div.post-content video {
+    width: 100%;
+    height: auto;
+}
 
 div.article .post-main div.post-attachcontent {
     width: calc(100% * 2 / 3);
