@@ -7,7 +7,7 @@
       {php}
       $authorName = $article->Author->Alias==""? $article->Author->Name : $article->Author->Alias
       {/php}
-      <div class="post-title g-left g-txt-ellipsis g-user-select">驾驶机动车在车道减少的路口，遇到 前方车辆依次停车或缓慢行驶时怎么办？</div>
+      <div class="post-title g-left g-txt-ellipsis g-user-select">{$authorName}</div>
     </header>
     <div class="post-content g-inline-justify g-user-select" id="article-{$article.ID}">
       {php}
