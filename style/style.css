@@ -907,3 +907,124 @@ div.article img {
         border-right: 1px solid #dcdcdc;
     }
 }
+
+/* 九宫格样式 */
+.grid-pics {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+  }
+  
+  .grid-pics img {
+    height: 100px;
+    width: calc(100% / 3);
+    box-sizing: border-box;
+    padding: 4px;
+  }
+  
+  /* 1个img */
+  .grid-pics img:nth-child(1) {
+    width: 100%;
+  }
+  
+  /* 2个img */
+  .grid-pics img:nth-child(1):only-child,
+  .grid-pics img:nth-child(2):only-child {
+    width: 50%;
+  }
+  
+  /* 3个img */
+  .grid-pics img:nth-child(1):only-child,
+  .grid-pics img:nth-child(2):only-child,
+  .grid-pics img:nth-child(3):only-child {
+    width: calc(100% / 3);
+  }
+  
+  /* 4个img */
+  .grid-pics img:nth-child(4):only-child,
+  .grid-pics img:nth-child(4):first-child,
+  .grid-pics img:nth-child(4):last-child,
+  .grid-pics img:nth-child(5):only-child,
+  .grid-pics img:nth-child(5):first-child,
+  .grid-pics img:nth-child(5):last-child,
+  .grid-pics img:nth-child(6):only-child,
+  .grid-pics img:nth-child(6):first-child,
+  .grid-pics img:nth-child(6):last-child {
+    width: calc(50% - 8px);
+  }
+  
+  /* 5个img */
+  .grid-pics img:nth-child(1),
+  .grid-pics img:nth-child(2),
+  .grid-pics img:nth-child(3) {
+    width: calc(100% / 3);
+  }
+  
+  .grid-pics img:nth-child(4),
+  .grid-pics img:nth-child(5) {
+    width: calc((100% / 3) - 4px);
+  }
+  
+  /* 6个img */
+  .grid-pics img:nth-child(1),
+  .grid-pics img:nth-child(2),
+  .grid-pics img:nth-child(3),
+  .grid-pics img:nth-child(4),
+  .grid-pics img:nth-child(5),
+  .grid-pics img:nth-child(6) {
+    width: calc(100% / 3);
+  }
+  
+  /* 7个img */
+  .grid-pics img:nth-child(1),
+  .grid-pics img:nth-child(2),
+  .grid-pics img:nth-child(3),
+  .grid-pics img:nth-child(4),
+  .grid-pics img:nth-child(5),
+  .grid-pics img:nth-child(6) {
+    width: calc(100% / 3);
+  }
+  
+  .grid-pics img:nth-child(7) {
+    width: calc(2 * (100% / 3) - 4px);
+  }
+  
+  /* 8个img */
+  .grid-pics img:nth-child(1),
+  .grid-pics img:nth-child(2),
+  .grid-pics img:nth-child(3),
+  .grid-pics img:nth-child(4),
+  .grid-pics img:nth-child(5),
+  .grid-pics img:nth-child(6) {
+    width: calc(100% / 3);
+  }
+  
+  .grid-pics img:nth-child(7),
+  .grid-pics img:nth-child(8) {
+    width: calc(2 * (100% / 3) - 4px);
+  }
+  
+  /* 9个img */
+  .grid-pics img {
+    width: calc(100% / 3);
+  }
+  
+  .grid-pics img:nth-child(9) {
+    width: calc(100% / 3);
+  }
+
+
+  /* 
+  帮我设计一个css，要求如下：
+1. 类名grid-pics的div横向填满父容器，纵向默认没有高度，由它内部的img撑起来，如果其内部没有img标签，则高度为0；
+2. 类名grid-pics内部的img标签样式要动态考虑，因为img的个数可能是0-9随机的，但是img的高度都为100px ；
+3. 如果只有1个img，则横向填满其父容器grid-pics；
+如果有2个，则横向等分布局；
+如果有3个，则3等分；
+如果有4个，则每行2个，宽度等分；
+如果有5个，则第一行3个，宽度3等分，第二行2个，宽度与第一行三等分后的宽度一致；
+如果有6个，则分两行，每行3等分；
+如果有7个，分3行，前两行3等分，第7个位于第三行，宽度为前两行3等分的宽度；
+如果有8个，分3行，前两行3等分，第7和第8个位于第三行，宽度为前两行3等分的宽度；
+如果有9个，分3行，每行3等分。 
+*/
