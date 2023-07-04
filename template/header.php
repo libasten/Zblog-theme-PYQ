@@ -18,5 +18,6 @@
   <link rel="shortcut icon" href="{$zbp->Config('FriendCircle')->favicon}">
   <link href="{$host}zb_users/theme/{$theme}/script/bootstrap/bootstrap.min.css?v=1" rel="stylesheet">
   <link href="{$host}zb_users/theme/{$theme}/style/{$style}.css" rel="stylesheet">
+  <link href="{$host}zb_users/theme/{$theme}/script/viewer.min.css" rel="stylesheet">
   {$header}
 </head>

@@ -396,6 +396,7 @@ div.article .post-main div.post-content img {
     max-width: 100%;
     vertical-align: bottom;
 }
+
 div.article .post-main div.post-content video {
     width: 100%;
     height: auto;
@@ -909,113 +910,59 @@ div.article img {
 }
 
 /* 九宫格样式 */
-.grid-pics {
+.box {
     display: flex;
     flex-wrap: wrap;
-    padding-bottom: 10px;
-  }
-  
-  .grid-pics img {
-    height: 100px;
-    width: calc(100% / 3);
-    box-sizing: border-box;
-    padding: 4px;
-  }
-  
-  /* 1个img */
-  .grid-pics img:nth-child(1) {
+    margin-top: 2%;
+}
+
+.grid-pics {
+    position: relative;
+    overflow: hidden;
     width: 100%;
-  }
-  
-  /* 2个img */
-  .grid-pics img:nth-child(1):only-child,
-  .grid-pics img:nth-child(2):only-child {
-    width: 50%;
-  }
-  
-  /* 3个img */
-  .grid-pics img:nth-child(1):only-child,
-  .grid-pics img:nth-child(2):only-child,
-  .grid-pics img:nth-child(3):only-child {
-    width: calc(100% / 3);
-  }
-  
-  /* 4个img */
-  .grid-pics img:nth-child(4):only-child,
-  .grid-pics img:nth-child(4):first-child,
-  .grid-pics img:nth-child(4):last-child,
-  .grid-pics img:nth-child(5):only-child,
-  .grid-pics img:nth-child(5):first-child,
-  .grid-pics img:nth-child(5):last-child,
-  .grid-pics img:nth-child(6):only-child,
-  .grid-pics img:nth-child(6):first-child,
-  .grid-pics img:nth-child(6):last-child {
-    width: calc(50% - 8px);
-  }
-  
-  /* 5个img */
-  .grid-pics img:nth-child(1),
-  .grid-pics img:nth-child(2),
-  .grid-pics img:nth-child(3) {
-    width: calc(100% / 3);
-  }
-  
-  .grid-pics img:nth-child(4),
-  .grid-pics img:nth-child(5) {
-    width: calc((100% / 3) - 4px);
-  }
-  
-  /* 6个img */
-  .grid-pics img:nth-child(1),
-  .grid-pics img:nth-child(2),
-  .grid-pics img:nth-child(3),
-  .grid-pics img:nth-child(4),
-  .grid-pics img:nth-child(5),
-  .grid-pics img:nth-child(6) {
-    width: calc(100% / 3);
-  }
-  
-  /* 7个img */
-  .grid-pics img:nth-child(1),
-  .grid-pics img:nth-child(2),
-  .grid-pics img:nth-child(3),
-  .grid-pics img:nth-child(4),
-  .grid-pics img:nth-child(5),
-  .grid-pics img:nth-child(6) {
-    width: calc(100% / 3);
-  }
-  
-  .grid-pics img:nth-child(7) {
-    width: calc(2 * (100% / 3) - 4px);
-  }
-  
-  /* 8个img */
-  .grid-pics img:nth-child(1),
-  .grid-pics img:nth-child(2),
-  .grid-pics img:nth-child(3),
-  .grid-pics img:nth-child(4),
-  .grid-pics img:nth-child(5),
-  .grid-pics img:nth-child(6) {
-    width: calc(100% / 3);
-  }
-  
-  .grid-pics img:nth-child(7),
-  .grid-pics img:nth-child(8) {
-    width: calc(2 * (100% / 3) - 4px);
-  }
-  
-  /* 9个img */
-  .grid-pics img {
-    width: calc(100% / 3);
-  }
-  
-  .grid-pics img:nth-child(9) {
-    width: calc(100% / 3);
-  }
+}
+
+.grid-pics img {
+    object-fit: cover;
+}
+
+.grid-pics img:nth-child(1):nth-last-child(1) {
+    width: 100%;
+}
+
+/* 2 */
+.grid-pics img:nth-child(1):nth-last-child(2),
+.grid-pics img:nth-child(2):nth-last-child(1) {
+    width: 49%;
+}
+
+/* 3 */
+.grid-pics img:nth-child(1):nth-last-child(3),
+.grid-pics img:nth-child(2):nth-last-child(2),
+.grid-pics img:nth-child(3):nth-last-child(1) {
+    width: 32%;
+}
 
 
-  /* 
-  帮我设计一个css，要求如下：
+/* 4 */
+.grid-pics img:nth-child(1):nth-last-child(4),
+.grid-pics img:nth-child(2):nth-last-child(3),
+.grid-pics img:nth-child(3):nth-last-child(2),
+.grid-pics img:nth-child(4):nth-last-child(1) {
+    width: 49%;
+    margin-bottom: 1%;
+}
+
+
+/*  5张以上图片  */
+.grid-pics img:nth-child(1):nth-last-child(n + 5),
+.grid-pics img:nth-child(1):nth-last-child(n + 5)~img {
+    width: 32%;
+    margin-bottom: 1%;
+}
+
+/* 
+  帮我设计一个css，要求使用flex布局，另外还要满足：
 1. 类名grid-pics的div横向填满父容器，纵向默认没有高度，由它内部的img撑起来，如果其内部没有img标签，则高度为0；
 2. 类名grid-pics内部的img标签样式要动态考虑，因为img的个数可能是0-9随机的，但是img的高度都为100px ；
 3. 如果只有1个img，则横向填满其父容器grid-pics；
@@ -1027,4 +974,37 @@ div.article img {
 如果有7个，分3行，前两行3等分，第7个位于第三行，宽度为前两行3等分的宽度；
 如果有8个，分3行，前两行3等分，第7和第8个位于第三行，宽度为前两行3等分的宽度；
 如果有9个，分3行，每行3等分。 
+*/
+
+/* 
+  帮我设计一段css，要求使用flex布局，另外还要满足：：
+1. 类名grid-pics的div横向填满父容器，纵向默认没有高度，高度由它内部的img撑起来，；
+2. 类名grid-pics内部的img标签样式要动态考虑，因为img的个数可能是0-9随机的，但是img的高度都为100px ；
+3. 类名为grid-pics的div内部的img如果
+4. 如果gird-pics内部只有1个img，则横向填满宽度，高度自适应；
+如果有2个img，则只在一行显示，宽度各占50%；
+如果有3个img，则只在一行显示，3等分布局；
+如果有4个img，则分为两行显示，每一行2等分布局；
+如果有5个img，则分为两行显示，第一行3等分布局，余下的两个在第二行显示，每个img宽度与第一行3等分后的宽度一致，右侧末尾空出一个img的宽度；
+如果有6个img，则分为两行显示，每行3等分；
+如果有7个img，则分为三行显示，第一行与第二行每行3等分布局；第7个img在第三行单独显示，宽度与第一行3等分后的宽度一致，右侧末尾空出两个img的宽度；
+如果有8个img，则分为三行显示，第一行与第二行每行3等分布局；第7、第8个img在第三行单独显示，宽度与第一行3等分后的宽度一致，右侧末尾空出一个img的宽度；
+如果有9个img，则分为三行显示，每一行显示3个，3等分布局，成为九宫格。
+
+
+*/
+
+/* 
+帮我写一段js代码，来控制类名为grid-pics的div内部的一些img标签的宽度与高度，要求如下：
+先获取div下一级字节点中有几个img。
+如果只有1个img，则横向占满宽度，高度自适应；
+如果有2个img，则只在一行显示，2等分布局
+如果有3个img，则只在一行显示，3等分布局；
+如果有4个img，则分为两行显示，每一行2等分布局，即4宫格布局。
+如果有5个img，则分为两行显示，第一行3等分布局，余下的两个在第二行显示，每个img宽度占父节点宽度的三分之一，右侧末尾空出一个img的宽度；
+如果有6个img，则分为两行显示，每行3等分；
+如果有7个img，则分为三行显示，第一行与第二行每行3等分布局；第7个img在第三行单独显示，每个img宽度占父节点宽度的三分之一，右侧末尾空出两个img的宽度；
+如果有8个img，则分为三行显示，第一行与第二行每行3等分布局；第7、第8个img在第三行单独显示，每个img宽度占父节点宽度的三分之一，右侧末尾空出一个img的宽度；
+如果有9个img，则分为三行显示，每一行显示3个，3等分布局，成为九宫格。
+
 */

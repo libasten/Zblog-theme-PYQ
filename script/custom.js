@@ -40,8 +40,10 @@ $(document).ready(function () {
       }
     });
   }
+  // 计算九宫格的高度
+  computeGridHeight();
 
-  // 插入图片
+  // 插入图片，editor.php 中使用。
   // 检测UEditor插件是否存在
   if ('UE' in window) {
     var myEditorImage;
@@ -71,6 +73,19 @@ $(document).ready(function () {
   }
 });
 
+// 计算九宫格的高度
+function computeGridHeight() {
+  var divWidth = $(".pic-item").width();
+  $(".pic-item").height(divWidth);
+}
+
+// 9宫格专用灯箱
+const viewer = new Viewer(document.getElementById('gridpics9'), {
+  // inline: true,
+  // viewed() {
+  //   viewer.zoomTo(1);
+  // },
+});
 
 // 动态显示评价框
 zbp.plugin.unbind("comment.reply.start", "system")

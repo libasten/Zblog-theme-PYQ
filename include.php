@@ -154,7 +154,7 @@ function FriendCircle_Filter_Plugin_Edit_Response5()
         .pics-wrapper .pic-div {
             display:flex;
             width:99%;
-            /* max-height: 0; */
+            max-height: 0;
             margin-bottom: 0px; 
             padding-bottom: 0px; 
             border-bottom: 0px dotted #ccc;
