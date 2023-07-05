@@ -1,6 +1,6 @@
 <div class="article g-clear-both">
   <div class="post-avatar g-left">
-    <img src="{$zbp->Config('FriendCircle')->avatar}" alt="avatar" class="g-alias-imgblock" />
+    <a href="{$zbp->host}"><img src="{$zbp->Config('FriendCircle')->avatar}" alt="avatar" class="g-alias-imgblock" /></a>
   </div>
   <div class="post-main g-right">
     <header class="post-header g-clear-both">
@@ -15,38 +15,38 @@
       $replacement = '<span class="view-image" href=$2$3.$4$5 title="'.$article->Title.'"><img$1class="ue-image" src=$2$3.$4$5 $6></span>';
       {/php}
       {if $zbp.Config('FriendCircle').fullArticle}
+      {php}
+      $content = preg_replace($pattern, $replacement, $article->Content);
+      {/php}
+      {if $zbp.Config('FriendCircle').readMore}
+      <div id="fold-article-{$article.ID}" class="fold-box">
         {php}
-        $content = preg_replace($pattern, $replacement, $article->Content);
+        echo($content)
         {/php}
-        {if $zbp.Config('FriendCircle').readMore}
-          <div id="fold-article-{$article.ID}" class="fold-box">
-          {php}
-          echo($content)
-          {/php}
-          </div>
-        {else}
-          {php}
-          echo($content)
-          {/php}
-        {/if}
+      </div>
       {else}
-        {php}
-        $intro = preg_replace($pattern, $replacement, $article->Intro);
-        echo($intro)
-        {/php}
+      {php}
+      echo($content)
+      {/php}
+      {/if}
+      {else}
+      {php}
+      $intro = preg_replace($pattern, $replacement, $article->Intro);
+      echo($intro)
+      {/php}
       {/if}
       <!-- 九宫格 -->
       <div class="grid-box">
-        <div class="grid-pics" id="gridpics9">
-        {if !empty(trim($article->Metas->gridPic1))}<img src="{$article.Metas.gridPic1}" class="pic-item view-image" alt="pic">{/if}
-        {if empty(trim($article->Metas->gridPic2))}<img src="{$article.Metas.gridPic2}" class="pic-item view-image" alt="pic">{/if}
-        {if empty(trim($article->Metas->gridPic3))}<img src="{$article.Metas.gridPic3}" class="pic-item view-image" alt="pic">{/if}
-        {if empty(trim($article->Metas->gridPic4))}<img src="{$article.Metas.gridPic4}" class="pic-item view-image" alt="pic">{/if}
-        {if empty(trim($article->Metas->gridPic5))}<img src="{$article.Metas.gridPic5}" class="pic-item view-image" alt="pic">{/if}
-        {if !empty(trim($article->Metas->gridPic6))}<img src="{$article.Metas.gridPic6}" class="pic-item view-image" alt="pic">{/if}
-        {if empty(trim($article->Metas->gridPic7))}<img src="{$article.Metas.gridPic7}" class="pic-item view-image" alt="pic">{/if}
-        {if empty(trim($article->Metas->gridPic8))}<img src="{$article.Metas.gridPic8}" class="pic-item view-image" alt="pic">{/if}
-        {if !empty(trim($article->Metas->gridPic9))}<img src="{$article.Metas.gridPic9}" class="pic-item view-image" alt="pic">{/if}
+        <div class="grid-pics" id="gridpics-{$article.ID}">
+          {if !empty(trim($article->Metas->gridPic1))}<img src="{$article.Metas.gridPic1}" class="pic-item" alt="pic">{/if}
+          {if !empty(trim($article->Metas->gridPic2))}<img src="{$article.Metas.gridPic2}" class="pic-item" alt="pic">{/if}
+          {if !empty(trim($article->Metas->gridPic3))}<img src="{$article.Metas.gridPic3}" class="pic-item" alt="pic">{/if}
+          {if !empty(trim($article->Metas->gridPic4))}<img src="{$article.Metas.gridPic4}" class="pic-item" alt="pic">{/if}
+          {if !empty(trim($article->Metas->gridPic5))}<img src="{$article.Metas.gridPic5}" class="pic-item" alt="pic">{/if}
+          {if !empty(trim($article->Metas->gridPic6))}<img src="{$article.Metas.gridPic6}" class="pic-item" alt="pic">{/if}
+          {if !empty(trim($article->Metas->gridPic7))}<img src="{$article.Metas.gridPic7}" class="pic-item" alt="pic">{/if}
+          {if !empty(trim($article->Metas->gridPic8))}<img src="{$article.Metas.gridPic8}" class="pic-item" alt="pic">{/if}
+          {if !empty(trim($article->Metas->gridPic9))}<img src="{$article.Metas.gridPic9}" class="pic-item" alt="pic">{/if}
         </div>
       </div>
     </div>
@@ -66,4 +66,12 @@
       </div>
     </footer>
   </div>
+  <script>
+    var lstPicItem = document.querySelectorAll("#gridpics-{$article.ID} .pic-item");
+    if (lstPicItem.length > 0) {
+      lstPicItem.forEach(x => {
+        x.style.height = lstPicItem[0].width + 'px';
+      })
+    }
+  </script>
 </div>

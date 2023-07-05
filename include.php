@@ -41,9 +41,9 @@ function FriendCircle_Filter_Plugin_Edit_Response5()
     <div class="np">
         <div name="gridImg" id="gridImg" style="display:none"></div>
         <div class="np-title" onclick="togglePics()">九宫格图片 · 点击展开</div>
-        <div class="np-info">默认最多支持发布9张图片，如发不满，需从1-9依次上传，后面的留空即可。
-            <br>如您需要发3张图片，则上传1~3号图片，4~9号留空。
-            <br>和发微信朋友圈一样，上传了图片或者视频，在文章正文中就<b>不要再插入图片了</b>！当然，你可以添加，但是体检会不好。
+        <div class="np-info">
+            默认支持最多发9张图片，和微信发朋友圈一样，上传了图片，正文中就<b>不要再插入图片了。</b><br/>
+            如果发其他图床的图片，无需上传，直接在图片地址栏输入图片路径即可。
         </div>
         <div class="pics-wrapper">
             <div class="pic-div">
@@ -149,7 +149,7 @@ function FriendCircle_Filter_Plugin_Edit_Response5()
     </div>
     <style>
         .np-title{padding-left:3px; line-height: 1em; font-size: 1.1em; font-weight: bold; margin-bottom:5px; cursor: pointer;}
-        .np-info{display:none;padding-left:4px; margin-bottom:10px; line-height:1.6rem;}
+        .np-info{display:none;padding-left:4px; margin-bottom:10px; line-height:1.6rem;border-bottom: 1px dotted #ccc;}
         .np-info b{font-weight:700;color:#ee0000;}
         .pics-wrapper .pic-div {
             display:flex;

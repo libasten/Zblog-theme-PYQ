@@ -64,8 +64,8 @@ if ($zbp->CheckPlugin('UEditor')) {
 						<table style="padding:0px;margin:0px;width:100%;" class="table_hover table_striped">
 							<tbody>
 								<tr>
-									<td>
-										<p><b>列表页是否全文输出</b><br><span class="note">开启后，文章列表页不再以文章摘要形式展示。</span></p>
+									<td width="360px">
+										<p><b>列表页全文输出</b><br><span class="note">开启后，文章列表页不再以文章摘要形式展示。<br />建议您打开全文输出获取最佳体验。</span></p>
 									</td>
 									<td>
 										<input id="fullArticle" name="fullArticle" class="checkbox" type="text" value="<?php echo (bool) $zbp->Config('FriendCircle')->fullArticle; ?>" size="100" /><br />
@@ -73,14 +73,14 @@ if ($zbp->CheckPlugin('UEditor')) {
 								</tr>
 								<tr>
 									<td>
-										<p><b>列表页是否自动折叠</b><br><span class="note">只有在开启全文情况下有效<br />开启后，列表自动添加“阅读全文”的按钮。</span></p>
+										<p><b>列表页自动折叠</b><br><span class="note">只有在开启全文情况下有效<br />开启后，列表自动添加“<b>展开</b>”的按钮。</span></p>
 									</td>
 									<td>
 										<input id="readMore" name="readMore" class="checkbox" type="text" value="<?php echo (bool) $zbp->Config('FriendCircle')->readMore; ?>" size="100" /><br />
 									</td>
 								</tr>
 								<tr>
-									<td width="300px">
+									<td >
 										<p><b>站长头像</b><br><span class="note">需要时正方形，最佳尺寸 100px * 100px 。</span></p>
 									</td>
 									<td>
@@ -146,7 +146,7 @@ if ($zbp->CheckPlugin('UEditor')) {
 					<div class="tab-content " style="border: none; padding: 0px; margin: 0px; display: none;" id="tab3">
 						<table style="padding:0px;margin:0px;width:100%;" class="table_hover table_striped">
 							<tr>
-								<td>0. 若要发布文字较多的文章，并需在列表页中全文输出，建议在“基础设置”中开启自动折叠功能。</td>
+								<td>0. 发表（编辑）文章时候，点击“九宫格图片”标题即可展开9宫格图片的上传区域，上传9宫格图片后，正文里面最好不要贴图片了，可能会影响效果。</td>
 							</tr>
 							<tr>
 								<td>1. 头像左侧的名称为后台“网站设置”中的网站标题，头像下侧的浅黑色“签名档”是网站副标题。</td>
@@ -161,13 +161,16 @@ if ($zbp->CheckPlugin('UEditor')) {
 								<td>4. 每篇文章末尾的定位，要在发表文章的时候自行设定，在“新建文章”的标题下方任意输入地点名称。</td>
 							</tr>
 							<tr>
-								<td>5. 默认字体是鸿蒙字体，如果发表文章时候没有自定设定，则以鸿蒙字体显示。</td>
+								<td>5. 若要发布文字较多的文章，建议在“基础设置”中开启自动折叠功能。</td>
 							</tr>
 							<tr>
-								<td>6. 倘若使用中遇到问题，或者有功能建议，可联系开发者飞刀，飞刀的QQ号：283813155。</td>
+								<td>6. 默认字体是鸿蒙字体，如果发表文章时候没有自定设定，则以鸿蒙字体显示。</td>
 							</tr>
 							<tr>
-								<td>7. 最后，欢迎访问 <a href="https://www.feidaoboke.com/" style="font-size:1.1rem;font-weight:700;"> 飞刀博客 </a></td>
+								<td>7. 倘若使用中遇到问题，或者有功能建议，可联系开发者飞刀，飞刀的QQ号：283813155。</td>
+							</tr>
+							<tr>
+								<td>8. 最后，欢迎访问 <a href="https://www.feidaoboke.com/" style="font-size:1.1rem;font-weight:700;"> 飞刀博客 </a></td>
 							</tr>
 						</table>
 					</div>

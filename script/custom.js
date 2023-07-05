@@ -14,34 +14,30 @@ $(document).ready(function () {
     h > 100 ? scroller.fadeIn() : scroller.fadeOut();
   })
 
-  $('.menu-btn').click(function () {
-    $('.nav-menu').slideToggle(200);
-    $('.menu-btn').toggleClass('open')
-  });
-
-
+  // 展开-折叠
   if ($(".fold-box").length > 0) {
     $(".fold-box").each(function () {
-      if ($(this).height() > 180) {
+      if ($(this).height() > 188) {
         var aID = $(this).attr('id').split("-")[2];
-        $(this).height('180px');
+        $(this).height('188px');
         $(this).css('overflow', 'hidden');
-        $(this).after('<div class="read-more" style="color:#576b95;margin-top:10px;cursor:pointer">展开</div>');
+        $(this).after('<div class="read-more" style="color:#576b95;margin:6px 0 10px 0;cursor:pointer">展开</div>');
         $('#article-' + aID + ' .read-more').on('click', function () {
           if ($(this).text() === '展开') {
             $('#fold-article-' + aID).height('auto');
             $(this).text('收起');
           }
           else {
-            $('#fold-article-' + aID).height('180px');
+            $('#fold-article-' + aID).height('188px');
             $(this).text('展开');
           }
         });
       }
     });
   }
-  // 计算九宫格的高度
-  computeGridHeight();
+
+  // 生成九宫格的灯箱
+  makeViewer();
 
   // 插入图片，editor.php 中使用。
   // 检测UEditor插件是否存在
@@ -73,19 +69,13 @@ $(document).ready(function () {
   }
 });
 
-// 计算九宫格的高度
-function computeGridHeight() {
-  var divWidth = $(".pic-item").width();
-  $(".pic-item").height(divWidth);
+// 生成9宫格灯箱
+function makeViewer() {
+  var gridPicsDivs = document.querySelectorAll('div.grid-pics');
+  for (var i = 0; i < gridPicsDivs.length; i++) {
+    new Viewer(document.getElementById(gridPicsDivs[i].id), {});
+  }  
 }
-
-// 9宫格专用灯箱
-const viewer = new Viewer(document.getElementById('gridpics9'), {
-  // inline: true,
-  // viewed() {
-  //   viewer.zoomTo(1);
-  // },
-});
 
 // 动态显示评价框
 zbp.plugin.unbind("comment.reply.start", "system")
