@@ -37,8 +37,7 @@ function FriendCircle_Filter_Plugin_Edit_Response5()
     <input name="meta_location" id="articleLocation" type="text" style="width:99%;margin:5px 0 0 0;font-size:0.9rem;color:#33e;padding:6px 0 6px 6px;" value="' . $article->Metas->location . '" />
     </div>';
     $blankPicHolder = $zbp->host . 'zb_users/theme/FriendCircle/style/img/placeholder_120x120.png';
-    echo <<<HTML
-    <div class="np">
+    echo '<div class="np">
         <div name="gridImg" id="gridImg" style="display:none"></div>
         <div class="np-title" onclick="togglePics()">九宫格图片 · 点击展开</div>
         <div class="np-info">
@@ -48,101 +47,101 @@ function FriendCircle_Filter_Plugin_Edit_Response5()
         <div class="pics-wrapper">
             <div class="pic-div">
                 <div class="pic-box">
-                    <img id="pic_upGridPic1" src="{$article->Metas->gridPic1}" class="image-wrapper"/>
+                    <img id="pic_upGridPic1" src="' . $article->Metas->gridPic1 . '" class="image-wrapper"/>
                 </div>
                 <div class="pic-info-ctrl">
                     <div class="pic-index">图片 1</div>
                     <input type="button" id="upGridPic1" class="button btn-upload-img" name="btn"  value="上传图片" />
                     <input type="button" id="removeGridPic1" class="button btn-remove-img" name="btn" value="移除图片" />
-                    <input type="text" id="url_upGridPic1" class="pic-path" name="meta_gridPic1" value="{$article->Metas->gridPic1}" placeholder="图片路径" />
+                    <input type="text" id="url_upGridPic1" class="pic-path" name="meta_gridPic1" value="' . $article->Metas->gridPic1 . '" placeholder="图片路径" />
                 </div>
             </div>
             <div class="pic-div">
                 <div class="pic-box">
-                    <img id="pic_upGridPic2" src="{$article->Metas->gridPic2}" class="image-wrapper"/>
+                    <img id="pic_upGridPic2" src="' . $article->Metas->gridPic2 . '" class="image-wrapper"/>
                 </div>
                 <div class="pic-info-ctrl">
                     <div class="pic-index">图片 2</div>
                     <input  type="button" id="upGridPic2" class="button btn-upload-img " name="btn"  value="上传图片" />
                     <input  type="button" id="removeGridPic2" class="button btn-remove-img" name="btn"  value="移除图片" />
-                    <input type="text" id="url_upGridPic2" class="pic-path" name="meta_gridPic2" value="{$article->Metas->gridPic2}" placeholder="图片路径" />
+                    <input type="text" id="url_upGridPic2" class="pic-path" name="meta_gridPic2" value="' . $article->Metas->gridPic2 . '" placeholder="图片路径" />
                 </div>
             </div>
             <div class="pic-div">
                 <div class="pic-box">
-                    <img id="pic_upGridPic3" src="{$article->Metas->gridPic3}" class="image-wrapper"/>
+                    <img id="pic_upGridPic3" src="' . $article->Metas->gridPic3 . '" class="image-wrapper"/>
                 </div>
                 <div class="pic-info-ctrl">
                     <div class="pic-index">图片 3</div>
                     <input  type="button" id="upGridPic3" class="button btn-upload-img " name="btn"  value="上传图片" />
                     <input  type="button" id="removeGridPic3" class="button btn-remove-img" name="btn"  value="移除图片" />
-                    <input type="text" id="url_upGridPic3" class="pic-path" name="meta_gridPic3" value="{$article->Metas->gridPic3}" placeholder="图片路径" />
+                    <input type="text" id="url_upGridPic3" class="pic-path" name="meta_gridPic3" value="' . $article->Metas->gridPic3 . '" placeholder="图片路径" />
                 </div>
             </div>
             <div class="pic-div">
                 <div class="pic-box">
-                    <img id="pic_upGridPic4" src="{$article->Metas->gridPic4}" class="image-wrapper"/>
+                    <img id="pic_upGridPic4" src="' . $article->Metas->gridPic4 . '" class="image-wrapper"/>
                 </div>
                 <div class="pic-info-ctrl">
                     <div class="pic-index">图片 4</div>
                     <input  type="button" id="upGridPic4" class="button btn-upload-img " name="btn"  value="上传图片" />
                     <input  type="button" id="removeGridPic4" class="button btn-remove-img" name="btn"  value="移除图片" />
-                    <input type="text" id="url_upGridPic4" class="pic-path" name="meta_gridPic4" value="{$article->Metas->gridPic4}" placeholder="图片路径" />
+                    <input type="text" id="url_upGridPic4" class="pic-path" name="meta_gridPic4" value="' . $article->Metas->gridPic4 . '" placeholder="图片路径" />
                 </div>
             </div>
             <div class="pic-div">
                 <div class="pic-box">
-                    <img id="pic_upGridPic5" src="{$article->Metas->gridPic5}" class="image-wrapper"/>
+                    <img id="pic_upGridPic5" src="' . $article->Metas->gridPic5 . '" class="image-wrapper"/>
                 </div>
                 <div class="pic-info-ctrl">
                     <div class="pic-index">图片 5</div>
                     <input  type="button" id="upGridPic5" class="button btn-upload-img " name="btn"  value="上传图片" />
                     <input  type="button" id="removeGridPic5" class="button btn-remove-img" name="btn"  value="移除图片" />
-                    <input type="text" id="url_upGridPic5" class="pic-path" name="meta_gridPic5" value="{$article->Metas->gridPic5}" placeholder="图片路径" />
+                    <input type="text" id="url_upGridPic5" class="pic-path" name="meta_gridPic5" value="' . $article->Metas->gridPic5 . '" placeholder="图片路径" />
                 </div>
             </div>
             <div class="pic-div">
                 <div class="pic-box">
-                    <img id="pic_upGridPic6" src="{$article->Metas->gridPic6}" class="image-wrapper"/>
+                    <img id="pic_upGridPic6" src="' . $article->Metas->gridPic6 . '" class="image-wrapper"/>
                 </div>
                 <div class="pic-info-ctrl">
                     <div class="pic-index">图片 6</div>
                     <input  type="button" id="upGridPic6" class="button btn-upload-img " name="btn"  value="上传图片" />
                     <input  type="button" id="removeGridPic6" class="button btn-remove-img" name="btn"  value="移除图片" />
-                    <input type="text" id="url_upGridPic6" class="pic-path" name="meta_gridPic6" value="{$article->Metas->gridPic6}" placeholder="图片路径" />
+                    <input type="text" id="url_upGridPic6" class="pic-path" name="meta_gridPic6" value="' . $article->Metas->gridPic6 . '" placeholder="图片路径" />
                 </div>
             </div>
             <div class="pic-div">
                 <div class="pic-box">
-                    <img id="pic_upGridPic7" src="{$article->Metas->gridPic7}" class="image-wrapper"/>
+                    <img id="pic_upGridPic7" src="' . $article->Metas->gridPic7 . '" class="image-wrapper"/>
                 </div>
                 <div class="pic-info-ctrl">
                     <div class="pic-index">图片 7</div>
                     <input  type="button" id="upGridPic7" class="button btn-upload-img " name="btn"  value="上传图片" />
                     <input  type="button" id="removeGridPic7" class="button btn-remove-img" name="btn"  value="移除图片" />
-                    <input type="text" id="url_upGridPic7" class="pic-path" name="meta_gridPic7" value="{$article->Metas->gridPic7}" placeholder="图片路径" />
+                    <input type="text" id="url_upGridPic7" class="pic-path" name="meta_gridPic7" value="' . $article->Metas->gridPic7 . '" placeholder="图片路径" />
                 </div>
             </div>
             <div class="pic-div">
                 <div class="pic-box">
-                    <img id="pic_upGridPic8" src="{$article->Metas->gridPic8}" class="image-wrapper"/>
+                    <img id="pic_upGridPic8" src="' . $article->Metas->gridPic8 . '" class="image-wrapper"/>
                 </div>
                 <div class="pic-info-ctrl">
                     <div class="pic-index">图片 8</div>
                     <input  type="button" id="upGridPic8" class="button btn-upload-img " name="btn"  value="上传图片" />
                     <input  type="button" id="removeGridPic8" class="button btn-remove-img" name="btn"  value="移除图片" />
-                    <input type="text" id="url_upGridPic8" class="pic-path" name="meta_gridPic8" value="{$article->Metas->gridPic8}" placeholder="图片路径" />
+                    <input type="text" id="url_upGridPic8" class="pic-path" name="meta_gridPic8" value="' . $article->Metas->gridPic8 . '" placeholder="图片路径" />
                 </div>
             </div>
             <div class="pic-div">
                 <div class="pic-box">
-                    <img id="pic_upGridPic9" src="{$article->Metas->gridPic9}" class="image-wrapper"/>
+                    <img id="pic_upGridPic9" src="' . $article->Metas->gridPic9 . '" class="image-wrapper"/>
                 </div>
                 <div class="pic-info-ctrl">
                     <div class="pic-index">图片 9</div>
                     <input  type="button" id="upGridPic9" class="button btn-upload-img " name="btn"  value="上传图片" />
                     <input  type="button" id="removeGridPic9" class="button btn-remove-img" name="btn"  value="移除图片" />
-                    <input type="text" id="url_upGridPic9" class="pic-path" name="meta_gridPic9" value="{$article->Metas->gridPic9}" placeholder="图片路径" />
+                    <input type="text" id="url_upGridPic9" class="pic-path" name="meta_gridPic9" value="' . $article->Metas->gridPic9 . '" placeholder="图片路径" />
                 </div>
             </div>
         </div>
@@ -197,7 +196,7 @@ function FriendCircle_Filter_Plugin_Edit_Response5()
         }
         var gridEditorImage;
         var d, e;
-        gridEditorImage = UE.getEditor('gridImg');
+        gridEditorImage = UE.getEditor("gridImg");
         gridEditorImage.ready(function () {
             gridEditorImage.hide();
         });
@@ -213,7 +212,7 @@ function FriendCircle_Filter_Plugin_Edit_Response5()
         $(".btn-upload-img").click(function () {
             upImage();
             e = $(this).attr("id");
-            gridEditorImage.addListener('beforeInsertImage', function (t, arg) {
+            gridEditorImage.addListener("beforeInsertImage", function (t, arg) {
                 $("#url_" + e).val(arg[0].src);
                 $("#pic_" + e).attr("src", arg[0].src + "?" + Math.random());
             })
@@ -221,12 +220,11 @@ function FriendCircle_Filter_Plugin_Edit_Response5()
         // 删除图片
         $(".btn-remove-img").click(function(){
             e = $(this).attr("id");
-            var t ='up' + e.substring(e.length - 8);
-            $("#url_" + t).val('');
-            $("#pic_" + t).attr("src", '');
+            var t ="up" + e.substring(e.length - 8);
+            $("#url_" + t).val("");
+            $("#pic_" + t).attr("src", "");
         })
-    </script>
-    HTML;
+    </script>';
 }
 
 function InstallPlugin_FriendCircle()
