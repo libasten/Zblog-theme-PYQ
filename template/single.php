@@ -59,14 +59,6 @@
             </aside>
             {/if}
           </div>
-          <script>
-            var lstPicItem = document.querySelectorAll("#gridpics-{$article.ID} .pic-item");
-            if (lstPicItem.length > 0) {
-              lstPicItem.forEach(x => {
-                x.style.height = lstPicItem[0].width + 'px';
-              })
-            }
-          </script>
         </div>
       </div>
     </main>
