@@ -38,35 +38,6 @@ $(document).ready(function () {
 
   // 生成九宫格的灯箱
   makeViewer();
-
-  // 插入图片，editor.php 中使用。
-  // 检测UEditor插件是否存在
-  if ('UE' in window) {
-    var myEditorImage;
-    var d, e;
-    myEditorImage = UE.getEditor('ueimg');
-    myEditorImage.ready(function () {
-      myEditorImage.hide();
-    });
-
-    function upImage() {
-      d = myEditorImage.getDialog("insertimage");
-      d.render();
-      d.open();
-    }
-    $(".btn-upload-img").click(function () {
-      upImage();
-      e = $(this).attr("id");
-      myEditorImage.addListener('beforeInsertImage', function (t, arg) {
-        $("#url_" + e).val(arg[0].src);
-        $("#pic_" + e).attr("src", arg[0].src + "?" + Math.random());
-      })
-    });
-  } else {
-    $("#updatapic1").click(function () {
-      alert("请先启用UEditor插件！");
-    });
-  }
 });
 
 // 生成9宫格灯箱
